@@ -1,0 +1,92 @@
+.user {
+    border-bottom: 1px solid #eaeaea;
+    display: inline-block;
+    margin-bottom: 0;
+    position: relative;
+    width: 100%;
+}
+
+.user:last-child {
+    border-bottom: none;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 12px 15px;
+    position: relative;
+}
+
+.active {
+    background: rgba(0,0,0,.05);
+    border-left: 1px solid #fa6342;
+}
+
+.user figure {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.user img {
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    max-width: 50px;
+    height: auto;
+    vertical-align: middle;
+    object-fit: cover;
+}
+
+.status {
+    background: #bebebe none repeat scroll 0 0;
+    border-radius: 50%;
+    bottom: 0;
+    display: inline-block;
+    height: 10px;
+    padding: 2px;
+    position: absolute;
+    right: 0;
+    width: 10px;
+}
+
+.status::after {
+    background: white none repeat scroll 0 0;
+    border-radius: 100%;
+    content: "";
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 6px;
+}
+
+.status.online {
+    background: #7FBA00;
+}
+
+.name {
+    display: inline-block;
+    line-height: initial;
+    max-width: 72%;
+    padding-left: 10px;
+    vertical-align: middle;
+}
+
+h6 {
+    color: #535165;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    width: 100%;
+}
+
+.lastMessage {
+    display: inline-block;
+    font-size: 12px;
+    line-height: 16px;
+    width: 100%;
+}

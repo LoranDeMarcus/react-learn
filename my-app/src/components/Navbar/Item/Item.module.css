@@ -1,0 +1,27 @@
+.item {
+    margin-right: 50px;
+    margin-bottom: 0;
+}
+
+.link {
+    color: #535165;
+    font-size: 14px;
+    font-weight: 500;
+    position: relative;
+    display: inline-block;
+}
+
+.link_active {
+    color: #fa6342;
+}
+
+.link_active::after {
+    border-bottom: 10px solid #fa6342;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    bottom: 0;
+    content: "";
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%);
+}

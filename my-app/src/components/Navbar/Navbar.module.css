@@ -1,0 +1,10 @@
+.navbar {
+    margin-top: 0;
+    line-height: 65px;
+    display: inline-flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}

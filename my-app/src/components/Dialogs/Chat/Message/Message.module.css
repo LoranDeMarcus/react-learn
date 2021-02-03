@@ -1,0 +1,82 @@
+.message {
+    display: inline-block;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.message .me {
+    text-align: right;
+}
+
+.message figure {
+    display: inline-block;
+    margin: 0;
+    vertical-align: top;
+}
+
+.me figure {
+    float: right;
+}
+
+.message img {
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 100%;
+    max-width: 25px;
+}
+
+.chatbox {
+    float: right;
+    margin-left: 0;
+    margin-right: 10px;
+    display: inline-block;
+    font-size: 13px;
+    max-width: 75%;
+    position: relative;
+    vertical-align: top;
+}
+
+.text {
+    margin: 0;
+    text-align: left;
+    background: #dbf4fd;
+    border-radius: 5px;
+    font-size: 13px;
+    line-height: 20px;
+    padding: 8px 7px;
+    position: relative;
+    color: #838195;
+}
+
+.chatbox .text::before {
+    border-color: transparent #dae7f1 transparent transparent;
+    border-style: solid;
+    border-width: 8px;
+    content: "";
+    left: -14px;
+    position: absolute;
+    top: 7px;
+    z-index: 2;
+}
+
+.me .chatbox .text::before {
+    border-left-color: #dbf4fd;
+    border-right-color: transparent;
+    left: auto;
+    right: -14px;;
+}
+
+.time {
+    margin-top: 2px;
+    float: right;
+    font-size: 11px;
+}
+
+.time i {
+    color: #23d2e2;
+    margin-left: -7px;
+}
+
+
+.message_status {
+    margin-right: 2px;
+}

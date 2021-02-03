@@ -1,0 +1,32 @@
+.block {
+    display: inline-block;
+    margin-bottom: 30px;
+    position: relative;
+    width: 100%;
+}
+
+.figure {
+    display: inline-block;
+    margin: 0;
+    position: relative;
+    width: 100%;
+}
+
+.img {
+    display: inline-block;
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+}
+
+.section {
+    background: #fff none repeat scroll 0 0;
+    display: inline-block;
+    padding: 0 15px;
+    position: relative;
+    width: 100%;
+}
+
+.block:hover .pp {
+    opacity: 1;
+    transform: scale(1);
+}

@@ -1,0 +1,11 @@
+.block {
+    width: 66.666%;
+    margin-left: 10px;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}

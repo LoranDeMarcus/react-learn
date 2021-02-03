@@ -1,0 +1,27 @@
+.block {
+    display: inline-block;
+    margin-bottom: 25px;
+    width: 50%;
+    padding: 0 15px;
+}
+
+.title {
+    color: #515365;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.title i {
+    margin-right: 5px;
+}
+
+.content {
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 0;
+    letter-spacing: 0.1px;
+    color: #959ab5;
+}
