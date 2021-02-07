@@ -29,7 +29,6 @@ const Message = (props) => {
                     { getMessageTime() }
                 </span>
             </div>
-
         </li>
     );
 };

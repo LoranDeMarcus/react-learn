@@ -5,8 +5,6 @@ import store from '../../../redux/state';
 
 import styles from './Chat.module.css';
 
-// TODO: понять как в этот чистый компонент передать messagesElements на подобии props.children
-
 const Chat = (props) => {
     const state = store.getState();
     const messagesElements = state.messagesPage.messages.map(message => {

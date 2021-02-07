@@ -24,4 +24,4 @@ window.state = store.getState();
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
 
-// next lesson: https://www.youtube.com/watch?v=ceSZUZZaW30&list=PLcvhF2Wqh7DNVy1OCUpG3i5lyxyBWhGZ8&index=50
+// next lesson: https://www.youtube.com/watch?v=vO63wxg4aKY&list=PLcvhF2Wqh7DNVy1OCUpG3i5lyxyBWhGZ8&index=54

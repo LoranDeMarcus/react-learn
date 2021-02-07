@@ -9,9 +9,10 @@ import FixedSidebar from './components/FixedSidebar/FixedSidebar';
 import Newsfeed from './components/Newsfeed/Newsfeed';
 import Main from './components/Main/Main';
 import Dialogs from './components/Dialogs/Dialogs';
-import Friends from './components/Friends/Friends';
+import UsersContainer from './components/Users/UsersContainer';
 
 import store from './redux/redux-store';
+
 
 const App = () => {
     return (
@@ -19,15 +20,17 @@ const App = () => {
             <div className="App">
                 <Header />
                 <FixedSidebar />
-                <Route path='/newsfeed' component={ Newsfeed } />
-                <Route path='/profile' render={ () =>
-                    <Main store={ store } />
-                } />
-                <Route path='/messages' render={ () =>
-                    <Dialogs store={ store } />
-                }
-                />
-                <Route path='/friends' component={ Friends } />
+                <div className="content">
+                    <Route path='/newsfeed' component={ Newsfeed } />
+                    <Route path='/profile' render={ () =>
+                        <Main store={ store } />
+                    } />
+                    <Route path='/messages' render={ () =>
+                        <Dialogs store={ store } />
+                    }
+                    />
+                    <Route path='/friends' component={ UsersContainer } />
+                </div>
             </div>
         </BrowserRouter>
     );

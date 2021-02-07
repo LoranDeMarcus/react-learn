@@ -77,7 +77,6 @@ const initialState = {
 };
 
 export const messagesReducer = (state = initialState, action) => {
-    debugger
     switch (action.type) {
         case UPDATE_NEW_MESSAGE_BODY: {
             return {
