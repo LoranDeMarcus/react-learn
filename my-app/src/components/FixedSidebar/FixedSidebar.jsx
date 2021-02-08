@@ -17,7 +17,7 @@ const FixedSidebar = () => {
                     link='/profile'
                     icon={ <i className="fas fa-user" /> } />
                 <Item
-                    title='Users'
+                    title='UsersBackup'
                     link='/friends'
                     icon={ <i className="fas fa-users" /> } />
                 <Item
