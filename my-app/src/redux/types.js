@@ -6,3 +6,4 @@ export const TOGGLE_FOLLOW = 'TOGGLE_FOLLOW';
 export const SET_USERS = 'SET_USERS';
 export const TOGGLE_PAGE = 'TOGGLE_PAGE';
 export const SET_TOTAL_USERS_COUNT = 'SET_TOTAL_USERS_COUNT';
+export const TOGGLE_IS_FETCHING = 'TOGGLE_IS_FETCHING';
