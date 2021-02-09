@@ -5,8 +5,8 @@ const Upload = ({ className }) => {
     return (
         <div className={ styles[className] }>
             <label className={ styles.edit }>
-                <i className="fas fa-camera"/>
-                <input type="file" className={ styles.action }/>
+                <i className="fas fa-camera" />
+                <input type="file" className={ styles.action } />
             </label>
         </div>
     );

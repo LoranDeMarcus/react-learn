@@ -1,7 +1,7 @@
 import React from 'react';
 import * as axios from 'axios';
 import styles from './Users.module.css';
-import defaultImg from '../avatars/defaultImg.png';
+import defaultImg from '../../assets/images/defaultImg.png';
 
 const UsersBackup = (props) => {
     const getUsers = () => {

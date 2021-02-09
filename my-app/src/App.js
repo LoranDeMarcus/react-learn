@@ -7,9 +7,9 @@ import './App.css';
 import Header from './components/Header/Header';
 import FixedSidebar from './components/FixedSidebar/FixedSidebar';
 import Newsfeed from './components/Newsfeed/Newsfeed';
-import Main from './components/Main/Main';
+import ProfileMain from './components/ProfileMain/ProfileMain';
 import Dialogs from './components/Dialogs/Dialogs';
-import UsersContainer from './components/Users/UsersContainer';
+import UsersMain from './components/UsersMain/UsersMain';
 
 import store from './redux/redux-store';
 
@@ -23,13 +23,16 @@ const App = () => {
                 <div className="content">
                     <Route path='/newsfeed' component={ Newsfeed } />
                     <Route path='/profile' render={ () =>
-                        <Main store={ store } />
+                        <ProfileMain store={ store } />
                     } />
                     <Route path='/messages' render={ () =>
                         <Dialogs store={ store } />
                     }
                     />
-                    <Route path='/friends' component={ UsersContainer } />
+                    <Route path='/friends' render={ () =>
+                        <UsersMain />
+                    }
+                    />
                 </div>
             </div>
         </BrowserRouter>

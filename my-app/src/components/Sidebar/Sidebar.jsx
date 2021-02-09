@@ -4,7 +4,7 @@ import Block from '../Block/Block';
 
 import styles from './Sidebar.module.css';
 
-const Sidebar = (props) => {
+const Sidebar = () => {
     return (
         <aside className={ styles.block }>
             <Block title='Personal Info'>

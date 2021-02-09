@@ -1,15 +1,14 @@
 import React from 'react';
-import Sidebar from '../Sidebar/Sidebar';
-import ProfileGeneral from '../ProfileGeneral/ProfileGeneral';
-
-import styles from './ProfileMain.module.css';
+import Container from '../Container/Container';
+import ProfileWrapper from '../ProfileWrapper/ProfileWrapper';
 
 const ProfileMain = (props) => {
     return (
-        <div className={ styles.main }>
-            <Sidebar />
-            <ProfileGeneral store={ props.store } />
-        </div>
+        <main>
+            <Container>
+                <ProfileWrapper store={ props.store } />
+            </Container>
+        </main>
     );
 };
 

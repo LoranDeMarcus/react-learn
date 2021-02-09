@@ -1,5 +1,5 @@
 import React from 'react';
-import defaultImg from '../avatars/defaultImg.png';
+import defaultImg from '../../assets/images/defaultImg.png';
 import defaultBg from '../../assets/images/defaultBg.jpg';
 
 import styles from './Users.module.css';
