@@ -4,11 +4,11 @@ import Block from '../Block/Block';
 
 import styles from './Sidebar.module.css';
 
-const Sidebar = () => {
+const Sidebar = (props) => {
     return (
         <aside className={ styles.block }>
             <Block title='Personal Info'>
-                <Info />
+                <Info profile={ props.profile } />
             </Block>
         </aside>
     );

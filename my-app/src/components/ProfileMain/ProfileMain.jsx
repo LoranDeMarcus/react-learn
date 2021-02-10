@@ -1,12 +1,12 @@
 import React from 'react';
 import Container from '../Container/Container';
-import ProfileWrapper from '../ProfileWrapper/ProfileWrapper';
+import ProfileWrapperContainer from '../ProfileWrapper/ProfileWrapperContainer';
 
 const ProfileMain = (props) => {
     return (
         <main>
             <Container>
-                <ProfileWrapper store={ props.store } />
+                <ProfileWrapperContainer store={ props.store } />
             </Container>
         </main>
     );

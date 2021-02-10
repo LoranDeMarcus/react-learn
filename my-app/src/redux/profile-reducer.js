@@ -1,4 +1,4 @@
-import { ADD_POST, UPDATE_NEW_POST_TEXT } from './types';
+import { ADD_POST, UPDATE_NEW_POST_TEXT, SET_USER_PROFILE } from './types';
 
 const initialState = {
     posts: [
@@ -23,7 +23,8 @@ const initialState = {
             message: '+rep'
         }
     ],
-    newPostText: ''
+    newPostText: '',
+    profile: null
 };
 
 export const profileReducer = (state = initialState, action) => {
@@ -44,7 +45,33 @@ export const profileReducer = (state = initialState, action) => {
                 }]
             };
         }
+        case SET_USER_PROFILE: {
+            return {
+                ...state,
+                profile: action.profile
+            }
+        }
         default:
             return state;
     }
 };
+
+export const addPostCreator = () => {
+    return {
+        type: ADD_POST
+    };
+};
+
+export const updateNewPostTextCreator = (newText) => {
+    return {
+        type: UPDATE_NEW_POST_TEXT,
+        newText
+    };
+};
+
+export const setUserProfile = (profile) => {
+    return {
+        type: SET_USER_PROFILE,
+        profile
+    }
+}

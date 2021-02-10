@@ -22,7 +22,7 @@ const App = () => {
                 <FixedSidebar />
                 <div className="content">
                     <Route path='/newsfeed' component={ Newsfeed } />
-                    <Route path='/profile' render={ () =>
+                    <Route path='/profile/:userId?' render={ () =>
                         <ProfileMain store={ store } />
                     } />
                     <Route path='/messages' render={ () =>

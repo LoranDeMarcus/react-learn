@@ -5,13 +5,13 @@ import Navbar from '../Navbar/Navbar';
 
 import styles from './Author.module.css';
 
-const Author = () => {
+const Author = (props) => {
     return (
         <div className={ styles.section }>
             <div className={ styles.block }>
                 <div className={ styles.thumb }>
                     <Upload className="dp"/> {/* TODO: тут разобраться как передать имя класса dp */ }
-                    <img src={ avatar } alt="" className={ styles.img }/>
+                    <img src={ props.profile.photos.small ? props.profile.photos.small : avatar } alt="" className={ styles.img }/>
                 </div>
                 <div className={ styles.title }>
                     <a href="#" className={ styles.name }>Jack Carter</a>

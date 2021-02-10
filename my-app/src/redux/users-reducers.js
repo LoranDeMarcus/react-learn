@@ -2,7 +2,7 @@ import { SET_TOTAL_USERS_COUNT, SET_USERS, TOGGLE_FOLLOW, TOGGLE_IS_FETCHING, TO
 
 const initialState = {
     users: [],
-    pageSize: 5,
+    pageSize: 8,
     totalUsersCount: 0,
     currentPage: 1,
     isFetching: false

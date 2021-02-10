@@ -7,8 +7,8 @@ import styles from './ProfileContent.module.css';
 const ProfileContent = (props) => {
     return (
         <div className={ styles.main }>
-            <Sidebar />
-            <ProfileGeneral store={ props.store } />
+            <Sidebar profile={ props.profile } />
+            <ProfileGeneral profile={ props.profile } />
         </div>
     );
 };

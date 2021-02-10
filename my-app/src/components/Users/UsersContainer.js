@@ -17,7 +17,7 @@ class UsersContainer extends React.Component {
         axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${ this.props.currentPage }&count=${ this.props.pageSize }`).then(response => {
             this.props.toggleIsFetching(false);
             this.props.setUsers(response.data.items);
-            this.props.setTotalUsersCount(response.data.totalCount > 30 ? 30 : response.data.totalCount);
+            this.props.setTotalUsersCount(response.data.totalCount > 100 ? 100 : response.data.totalCount);
         });
     }
 
@@ -60,6 +60,6 @@ const dispatches = {
     togglePage,
     setTotalUsersCount,
     toggleIsFetching
-}
+};
 
 export default connect(mapStateToProps, dispatches)(UsersContainer);

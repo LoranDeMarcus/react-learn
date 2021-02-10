@@ -1,7 +1,7 @@
 import React from 'react';
-import { addPostCreator, updateNewPostTextCreator } from '../../redux/action';
+import { addPostCreator, updateNewPostTextCreator } from '../../redux/profile-reducer';
 import Posts from './Posts';
-import connect from 'react-redux/lib/connect/connect';
+import { connect } from 'react-redux';
 
 /*const PostsContainer = () => {
     return (

@@ -30,7 +30,7 @@ const Users = (props) => {
                         </figure>
                         <div className={ styles.meta }>
                             <NavLink to={`/profile/${user.id}`}>
-                                <img src={ user.photos.small !== null ? user.photos.small : defaultImg }
+                                <img src={ user.photos.small ? user.photos.small : defaultImg }
                                      className={ styles.avatar } alt='' />
                             </NavLink>
                             <div className={ styles.name }>

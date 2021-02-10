@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Info.module.css';
 
-const Info = () => {
+const Info = (props) => {
     return (
         <div className={ styles.info }>
             <span className={ styles.title }>
@@ -9,8 +9,7 @@ const Info = () => {
                 About Me:
             </span>
             <p className={ styles.main }>
-                Hi, I’m John Carter, I’m 36 and I work as a Digital Designer for the “dewwater” Agency in Ontario,
-                Canada
+                {props.profile.aboutMe}
             </p>
             <span className={ styles.title }>
                 <i className="fa fa-birthday-cake"/>

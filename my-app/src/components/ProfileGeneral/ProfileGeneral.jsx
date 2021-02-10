@@ -36,7 +36,7 @@ const ProfileGeneral = (props) => {
                 </div>
             </Block>
             <Block title='Posts'>
-                <PostsContainer store={ props.store } />
+                <PostsContainer />
             </Block>
         </div>
     );
