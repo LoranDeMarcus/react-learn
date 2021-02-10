@@ -4,7 +4,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import './normalize.css';
 import './App.css';
 
-import Header from './components/Header/Header';
+import HeaderContainer from './components/Header/HeaderContainer';
 import FixedSidebar from './components/FixedSidebar/FixedSidebar';
 import Newsfeed from './components/Newsfeed/Newsfeed';
 import ProfileMain from './components/ProfileMain/ProfileMain';
@@ -18,7 +18,7 @@ const App = () => {
     return (
         <BrowserRouter>
             <div className="App">
-                <Header />
+                <HeaderContainer />
                 <FixedSidebar />
                 <div className="content">
                     <Route path='/newsfeed' component={ Newsfeed } />

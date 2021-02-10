@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.png';
 // import avatar from './avatar.jpg';
 import styles from './Header.module.css';
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
     return (
@@ -53,6 +54,9 @@ const Header = () => {
                 <div className={ styles.panel }>
                     <h5 className={ styles.panel__title }>Jack Carter</h5>
                     <img className={ styles.panel__img } src='' alt="" /> {/*TODO: тут вставить аватар*/ }
+                </div>
+                <div className={ styles.login }>
+                    <NavLink to={'/login'}>Login</NavLink>
                 </div>
             </div>
         </header>
