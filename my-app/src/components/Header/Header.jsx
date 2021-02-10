@@ -1,10 +1,9 @@
 import React from 'react';
 import logo from './logo.png';
-// import avatar from './avatar.jpg';
 import styles from './Header.module.css';
 import { NavLink } from 'react-router-dom';
 
-const Header = () => {
+const Header = (props) => {
     return (
         <header className={ styles.block }>
             <div className={ styles.logo }>
@@ -52,11 +51,12 @@ const Header = () => {
                     </li>
                 </ul>
                 <div className={ styles.panel }>
-                    <h5 className={ styles.panel__title }>Jack Carter</h5>
-                    <img className={ styles.panel__img } src='' alt="" /> {/*TODO: тут вставить аватар*/ }
+                    <h5 className={ styles.panel__title }>
+                        { props.isAuth ? props.login : <NavLink to={ '/login' }>Login</NavLink> }
+                    </h5>
                 </div>
                 <div className={ styles.login }>
-                    <NavLink to={'/login'}>Login</NavLink>
+
                 </div>
             </div>
         </header>
