@@ -15,4 +15,13 @@ export const usersAPI = {
     authMeRequest() {
         return axiosInstance.get('auth/me').then(response => response.data);
     },
+    toggleFollow(id) {
+        return axiosInstance.get(`follow/${ id }`).then(response => {
+            if (response.data === false) {
+                axiosInstance.post(`follow/${ id }`).then(response => response.data);
+            } else {
+                axiosInstance.delete(`follow/${ id }`).then(response => response.data);
+            }
+        });
+    }
 }

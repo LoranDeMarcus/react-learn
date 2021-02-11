@@ -49,18 +49,10 @@ const Users = (props) => {
                                 </li>
                             </ul>
                             <button disabled={ props.followingInProgress.some(id => id === user.id) } onClick={ () => {
-                                console.log(props.followingInProgress);
-                                axios.get(`https://social-network.samuraijs.com/api/1.0/follow/${ user.id }`, {
-                                    withCredentials: true
-                                }).then(response => {
+                                axios.get(`https://social-network.samuraijs.com/api/1.0/follow/${ user.id }`).then(response => {
                                     if (response.data === false) {
                                         props.toggleFollowingProgress(true, user.id);
-                                        axios.post(`https://social-network.samuraijs.com/api/1.0/follow/${ user.id }`, {}, {
-                                            withCredentials: true,
-                                            headers: {
-                                                'API-KEY': '53f444d4-767d-44da-b452-21ca4aee6d91' /* TODO: запросы перенести в API */
-                                            }
-                                        }).then(response => {
+                                        axios.post(`https://social-network.samuraijs.com/api/1.0/follow/${ user.id }`).then(response => {
                                             if (response.data.resultCode === 0) {
                                                 props.toggleFollow(user.id);
                                             }
@@ -68,12 +60,7 @@ const Users = (props) => {
                                         });
                                     } else {
                                         props.toggleFollowingProgress(true, user.id);
-                                        axios.delete(`https://social-network.samuraijs.com/api/1.0/follow/${ user.id }`, {
-                                            withCredentials: true,
-                                            headers: {
-                                                'API-KEY': '53f444d4-767d-44da-b452-21ca4aee6d91'
-                                            }
-                                        }).then(response => {
+                                        axios.delete(`https://social-network.samuraijs.com/api/1.0/follow/${ user.id }`).then(response => {
                                             if (response.data.resultCode === 0) {
                                                 props.toggleFollow(user.id);
                                             }
