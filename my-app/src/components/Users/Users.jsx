@@ -5,6 +5,7 @@ import { NavLink } from 'react-router-dom';
 import * as axios from 'axios';
 
 import styles from './Users.module.css';
+import { toggleFollowingProgress } from '../../redux/users-reducers';
 
 const Users = (props) => {
     const pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
@@ -47,11 +48,13 @@ const Users = (props) => {
                                     { user.status }
                                 </li>
                             </ul>
-                            <button onClick={ () => {
+                            <button disabled={ props.followingInProgress.some(id => id === user.id) } onClick={ () => {
+                                console.log(props.followingInProgress);
                                 axios.get(`https://social-network.samuraijs.com/api/1.0/follow/${ user.id }`, {
                                     withCredentials: true
                                 }).then(response => {
                                     if (response.data === false) {
+                                        props.toggleFollowingProgress(true, user.id);
                                         axios.post(`https://social-network.samuraijs.com/api/1.0/follow/${ user.id }`, {}, {
                                             withCredentials: true,
                                             headers: {
@@ -61,8 +64,10 @@ const Users = (props) => {
                                             if (response.data.resultCode === 0) {
                                                 props.toggleFollow(user.id);
                                             }
+                                            props.toggleFollowingProgress(false, user.id);
                                         });
                                     } else {
+                                        props.toggleFollowingProgress(true, user.id);
                                         axios.delete(`https://social-network.samuraijs.com/api/1.0/follow/${ user.id }`, {
                                             withCredentials: true,
                                             headers: {
@@ -72,12 +77,13 @@ const Users = (props) => {
                                             if (response.data.resultCode === 0) {
                                                 props.toggleFollow(user.id);
                                             }
+                                            props.toggleFollowingProgress(false, user.id);
                                         });
                                     }
                                 });
 
                             } } className={ styles.button }>
-                                { user.isFollowed ? 'Unfollow' : 'Follow' } {/* TODO: когда уйдет 429, проверить кнопку  */}
+                                { user.isFollowed ? 'Unfollow' : 'Follow' } {/* TODO: когда уйдет 429, проверить кнопку  */ }
                             </button>
                         </div>
                     </div>;

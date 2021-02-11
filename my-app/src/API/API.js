@@ -11,5 +11,8 @@ const axiosInstance = axios.create({
 export const usersAPI = {
     getUsersRequest(currentPage = 1, pageSize = 8) {
         return axiosInstance.get(`users?page=${ currentPage }&count=${ pageSize }`).then(response => response.data);
-    }
+    },
+    authMeRequest() {
+        return axiosInstance.get('auth/me').then(response => response.data);
+    },
 }
