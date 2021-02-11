@@ -10,7 +10,7 @@ const ProfileCover = (props) => {
         <div className={ styles.block }>
             <figure className={ styles.figure }>
                 <Upload className="pp" />
-                <img src={ profileImg } alt="" className={ styles.img } />
+                <img src={ profileImg } alt="Background" className={ styles.img } />
             </figure>
             <Author profile={props.profile} />
         </div>

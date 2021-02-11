@@ -114,10 +114,16 @@ export const getUsers = (currentPage, pageSize) => {
     }
 }
 
-export const toggleFollows = (id) => {
+export const toggleFollowing = (id) => {
     return (dispatch) => {
-        usersAPI.toggleFollow(id).then(data => {
+        dispatch(toggleFollowingProgress(true, id));
 
+        usersAPI.toggleFollow(id).then(data => {
+            console.log(data);
+            if (data.resultCode === 0) {
+                dispatch(toggleFollow(id));
+            }
+            dispatch(toggleFollowingProgress(false, id));
         });
     }
 }

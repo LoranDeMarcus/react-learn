@@ -1,12 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import {
-    getUsers,
-    toggleFollow,
-    toggleFollowingProgress,
-    toggleFollows,
-    togglePage
-} from '../../redux/users-reducers';
+import { getUsers, toggleFollow, toggleFollowingProgress, toggleFollowing, togglePage } from '../../redux/users-reducers';
 import Users from './Users';
 import Preloader from '../common/Preloader/Preloader';
 
@@ -27,9 +21,8 @@ class UsersContainer extends React.Component {
                    currentPage={ this.props.currentPage }
                    users={ this.props.users }
                    onPageChanged={ this.onPageChanged }
-                   toggleFollow={ this.props.toggleFollow }
-                   toggleFollowingProgress={ this.props.toggleFollowingProgress }
                    followingInProgress={ this.props.followingInProgress }
+                   toggleFollowing={ this.props.toggleFollowing }
             />
         </>;
     }
@@ -51,7 +44,7 @@ const dispatches = {
     togglePage,
     toggleFollowingProgress,
     getUsers,
-    toggleFollows
+    toggleFollowing
 };
 
 export default connect(mapStateToProps, dispatches)(UsersContainer);

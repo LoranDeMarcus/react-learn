@@ -1,4 +1,6 @@
 import { ADD_POST, UPDATE_NEW_POST_TEXT, SET_USER_PROFILE } from './types';
+import { usersAPI } from '../API/API';
+import { setTotalUsersCount, setUsers, toggleIsFetching } from './users-reducers';
 
 const initialState = {
     posts: [
@@ -73,5 +75,13 @@ export const setUserProfile = (profile) => {
     return {
         type: SET_USER_PROFILE,
         profile
+    }
+}
+
+export const setUsersProfile = (userId) => {
+    return (dispatch) => {
+        usersAPI.setUsersProfile(userId).then(data => {
+            dispatch(setUserProfile(data));
+        });
     }
 }

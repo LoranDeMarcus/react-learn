@@ -12,15 +12,18 @@ export const usersAPI = {
     getUsersRequest(currentPage = 1, pageSize = 8) {
         return axiosInstance.get(`users?page=${ currentPage }&count=${ pageSize }`).then(response => response.data);
     },
+    setUsersProfile(userId) {
+        return axiosInstance.get(`profile/${userId}`).then(response => response.data);
+    },
     authMeRequest() {
         return axiosInstance.get('auth/me').then(response => response.data);
     },
-    toggleFollow(id) {
-        return axiosInstance.get(`follow/${ id }`).then(response => {
+    toggleFollow(userId) {
+        return axiosInstance.get(`follow/${ userId }`).then(response => {
             if (response.data === false) {
-                axiosInstance.post(`follow/${ id }`).then(response => response.data);
+                return axiosInstance.post(`follow/${ userId }`).then(response => response.data);
             } else {
-                axiosInstance.delete(`follow/${ id }`).then(response => response.data);
+                return axiosInstance.delete(`follow/${ userId }`).then(response => response.data);
             }
         });
     }
