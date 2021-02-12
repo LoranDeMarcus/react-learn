@@ -2,13 +2,14 @@ import React from 'react';
 import { sendMessageCreator, updateNewMessageBodyCreator } from '../../../redux/action';
 import Chat from './Chat';
 import connect from 'react-redux/lib/connect/connect';
+import { withAuthRedirect } from '../../../HOC/withAuthRedirect';
+import { compose } from 'redux';
 
 const mapStateToProps = (state) => {
     return {
         dialogs: state.messagesPage.dialogs,
         newMessageBody: state.messagesPage.newMessageBody,
-        messagesPage: state.messagesPage.messages,
-        isAuth: state.auth.isAuth
+        messagesPage: state.messagesPage.messages
     }
 }
 
@@ -23,6 +24,7 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-const ChatContainer = connect(mapStateToProps, mapDispatchToProps)(Chat);
-
-export default ChatContainer;
+export default compose(
+    connect(mapStateToProps, mapDispatchToProps),
+    withAuthRedirect
+)(Chat);

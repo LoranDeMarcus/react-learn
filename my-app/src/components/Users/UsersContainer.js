@@ -1,9 +1,17 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { getUsers, toggleFollow, toggleFollowingProgress, toggleFollowing, togglePage } from '../../redux/users-reducers';
+import {
+    getUsers,
+    toggleFollow,
+    toggleFollowingProgress,
+    toggleFollowing,
+    togglePage
+} from '../../redux/users-reducers';
 import Users from './Users';
 import Preloader from '../common/Preloader/Preloader';
 import { Redirect } from 'react-router';
+import { compose } from 'redux';
+import { withAuthRedirect } from '../../HOC/withAuthRedirect';
 
 class UsersContainer extends React.Component {
     componentDidMount() {
@@ -15,7 +23,7 @@ class UsersContainer extends React.Component {
     };
 
     render() {
-        if (this.props.isAuth === false) return <Redirect to='/login' />
+        if (this.props.isAuth === false) return <Redirect to='/login' />;
 
         return <>
             { this.props.isFetching ? <Preloader /> : null }
@@ -51,4 +59,4 @@ const dispatches = {
     toggleFollowing
 };
 
-export default connect(mapStateToProps, dispatches)(UsersContainer);
+export default compose(withAuthRedirect, connect(mapStateToProps, dispatches))(UsersContainer);
