@@ -1,10 +1,12 @@
 import React from 'react';
+import { Redirect } from 'react-router';
 
-const Newsfeed = () => {
+const Newsfeed = (props) => {
+    if (props.state.auth.isAuth === false) return <Redirect to='/login' />
     return (
-        <div>
-
-        </div>
+        <h1>
+            Newsfeed
+        </h1>
     )
 }
 

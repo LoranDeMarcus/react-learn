@@ -1,14 +1,15 @@
 import React from 'react';
 import User from './User/User';
 import Message from './Message/Message';
-import store from '../../../redux/state';
+import { Redirect } from 'react-router';
 
 import styles from './Chat.module.css';
 
 const Chat = (props) => {
-    const state = store.getState();
-    const messagesElements = state.messagesPage.messages.map(message => {
-        return <Message data={ state.messagesPage.dialogs } message={ message.message }
+    if (!props.isAuth) return <Redirect to='/login' />
+
+    const messagesElements = props.messagesPage.map(message => {
+        return <Message data={ props.dialogs } message={ message.message } /* todo: переделать структура state */
                         time={ message.time } />;
     });
     const newMessageBody = props.newMessageBody;

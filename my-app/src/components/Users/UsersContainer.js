@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { getUsers, toggleFollow, toggleFollowingProgress, toggleFollowing, togglePage } from '../../redux/users-reducers';
 import Users from './Users';
 import Preloader from '../common/Preloader/Preloader';
+import { Redirect } from 'react-router';
 
 class UsersContainer extends React.Component {
     componentDidMount() {
@@ -14,6 +15,8 @@ class UsersContainer extends React.Component {
     };
 
     render() {
+        if (this.props.isAuth === false) return <Redirect to='/login' />
+
         return <>
             { this.props.isFetching ? <Preloader /> : null }
             <Users totalUsersCount={ this.props.totalUsersCount }
@@ -35,7 +38,8 @@ const mapStateToProps = (state) => {
         totalUsersCount: state.usersPage.totalUsersCount,
         currentPage: state.usersPage.currentPage,
         isFetching: state.usersPage.isFetching,
-        followingInProgress: state.usersPage.followingInProgress
+        followingInProgress: state.usersPage.followingInProgress,
+        isAuth: state.auth.isAuth
     };
 };
 

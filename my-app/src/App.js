@@ -10,9 +10,9 @@ import Newsfeed from './components/Newsfeed/Newsfeed';
 import ProfileMain from './components/ProfileMain/ProfileMain';
 import Dialogs from './components/Dialogs/Dialogs';
 import UsersMain from './components/UsersMain/UsersMain';
+import Login from './components/Login/Login';
 
 import store from './redux/redux-store';
-
 
 const App = () => {
     return (
@@ -21,18 +21,21 @@ const App = () => {
                 <HeaderContainer />
                 <FixedSidebar />
                 <div className="content">
-                    <Route path='/newsfeed' component={ Newsfeed } />
+                    <Route path='/newsfeed' render={ () =>
+                        <Newsfeed state={ store.getState() } />
+                    } />
                     <Route path='/profile/:userId?' render={ () =>
                         <ProfileMain store={ store } />
                     } />
                     <Route path='/messages' render={ () =>
                         <Dialogs store={ store } />
-                    }
-                    />
+                    } />
                     <Route path='/friends' render={ () =>
                         <UsersMain />
-                    }
-                    />
+                    } />
+                    <Route path='/login' render={ () =>
+                        <Login />
+                    } />
                 </div>
             </div>
         </BrowserRouter>
