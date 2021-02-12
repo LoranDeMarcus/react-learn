@@ -7,7 +7,7 @@ import { withRouter } from 'react-router';
 class ProfileWrapperContainer extends React.Component {
     componentDidMount() {
         let userId = this.props.match.params.userId
-        if (!userId) userId = 2;
+        if (!userId) userId = 14825;
         this.props.setUsersProfile(userId);
     }
 

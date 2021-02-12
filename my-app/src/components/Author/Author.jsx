@@ -6,7 +6,6 @@ import Navbar from '../Navbar/Navbar';
 import styles from './Author.module.css';
 
 const Author = (props) => {
-    console.log(props);
     return (
         <div className={ styles.section }>
             <div className={ styles.block }>

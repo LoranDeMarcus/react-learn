@@ -1,6 +1,5 @@
 import { ADD_POST, UPDATE_NEW_POST_TEXT, SET_USER_PROFILE } from './types';
 import { usersAPI } from '../API/API';
-import { setTotalUsersCount, setUsers, toggleIsFetching } from './users-reducers';
 
 const initialState = {
     posts: [

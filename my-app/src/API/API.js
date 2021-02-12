@@ -15,9 +15,6 @@ export const usersAPI = {
     setUsersProfile(userId) {
         return axiosInstance.get(`profile/${userId}`).then(response => response.data);
     },
-    authMeRequest() {
-        return axiosInstance.get('auth/me').then(response => response.data);
-    },
     toggleFollow(userId) {
         return axiosInstance.get(`follow/${ userId }`).then(response => {
             if (response.data === false) {
@@ -27,4 +24,10 @@ export const usersAPI = {
             }
         });
     }
+}
+
+export const authAPI = {
+    authMeRequest() {
+        return axiosInstance.get('auth/me').then(response => response.data);
+    },
 }

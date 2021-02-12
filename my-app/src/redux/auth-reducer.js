@@ -1,5 +1,5 @@
 import { SET_USER_DATA } from './types';
-import { usersAPI } from '../API/API';
+import { authAPI } from '../API/API';
 
 const initialState = {
     id: null,
@@ -32,7 +32,7 @@ export const setAuthUserData = (data) => {
 
 export const authMe = () => {
     return (dispatch) => {
-        usersAPI.authMeRequest().then(data => {
+        authAPI.authMeRequest().then(data => {
             if (data.resultCode === 0) {
                 dispatch(setAuthUserData(data.data));
             }
