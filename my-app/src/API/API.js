@@ -12,8 +12,9 @@ export const usersAPI = {
     getUsersRequest(currentPage = 1, pageSize = 8) {
         return axiosInstance.get(`users?page=${ currentPage }&count=${ pageSize }`).then(response => response.data);
     },
-    setUsersProfile(userId) {
-        return axiosInstance.get(`profile/${userId}`).then(response => response.data);
+    getUsersProfile(userId) {
+        console.warn('Obsolete method. Please use profileAPI object');
+        return profileAPI.getUsersProfile(userId);
     },
     toggleFollow(userId) {
         return axiosInstance.get(`follow/${ userId }`).then(response => {
@@ -23,6 +24,18 @@ export const usersAPI = {
                 return axiosInstance.delete(`follow/${ userId }`).then(response => response.data);
             }
         });
+    }
+}
+
+export const profileAPI = {
+    getUsersProfile(userId) {
+        return axiosInstance.get(`profile/${userId}`).then(response => response.data);
+    },
+    getUserStatus(userId) {
+        return axiosInstance.get(`profile/status/${userId}`).then(response => response.data);
+    },
+    updateUserStatus(status) {
+        return axiosInstance.put(`profile/status`, { status });
     }
 }
 

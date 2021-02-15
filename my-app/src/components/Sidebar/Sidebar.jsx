@@ -8,8 +8,11 @@ import styles from './Sidebar.module.css';
 const Sidebar = (props) => {
     return (
         <aside className={ styles.block }>
-            <Block  title='Status'>
-                <ProfileStatus />
+            <Block title='Status'>
+                <ProfileStatus
+                    status={ props.status }
+                    updateUserStatus={ props.updateUserStatus }
+                />
             </Block>
             <Block title='Personal Info'>
                 <Info profile={ props.profile } />

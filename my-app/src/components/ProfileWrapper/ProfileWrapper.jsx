@@ -5,13 +5,17 @@ import Preloader from '../common/Preloader/Preloader';
 
 const ProfileWrapper = (props) => {
     if (!props.profile) {
-        return <Preloader />
+        return <Preloader />;
     }
 
     return (
         <>
             <ProfileCover profile={ props.profile } />
-            <ProfileContent profile={ props.profile } />
+            <ProfileContent
+                profile={ props.profile }
+                status={ props.status }
+                updateUserStatus={props.updateUserStatus}
+            />
         </>
     );
 };
