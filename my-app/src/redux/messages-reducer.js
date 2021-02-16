@@ -72,30 +72,28 @@ const initialState = {
             message: 'Dear You May again download the package directly',
             time: '23:50'
         }
-    ],
-    newMessageBody: ''
+    ]
 };
 
 export const messagesReducer = (state = initialState, action) => {
     switch (action.type) {
-        case UPDATE_NEW_MESSAGE_BODY: {
-            return {
-                ...state,
-                newMessageBody: action.newBody
-            };
-        }
         case SEND_MESSAGE: {
-            const body = state.newMessageBody;
             return {
                 ...state,
-                newMessageBody: '',
                 messages: [...state.messages, {
                     id: 6,
-                    message: body
+                    message: action.newMessageBody
                 }]
             };
         }
         default:
             return state;
     }
+};
+
+export const sendMessageCreator = (newMessageBody) => {
+    return {
+        type: SEND_MESSAGE,
+        newMessageBody
+    };
 };

@@ -43,4 +43,9 @@ export const authAPI = {
     authMeRequest() {
         return axiosInstance.get('auth/me').then(response => response.data);
     },
+    loginRequest() {
+        return axiosInstance.post('auth/login').then(response => {
+            console.log(response);
+        });
+    }
 }

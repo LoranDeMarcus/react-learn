@@ -1,34 +1,7 @@
 import React from 'react';
-import { addPostCreator, updateNewPostTextCreator } from '../../redux/profile-reducer';
+import { addPostCreator } from '../../redux/profile-reducer';
 import Posts from './Posts';
 import { connect } from 'react-redux';
-
-/*const PostsContainer = () => {
-    return (
-        <StoreContext.Consumer>
-            {
-                (reduxStore) => {
-                    const state = reduxStore.getState();
-
-                    const addPost = () => {
-                        reduxStore.dispatch(addPostCreator());
-                    };
-
-                    const onPostChange = (newText) => {
-                        reduxStore.dispatch(updateNewPostTextCreator(newText));
-                    };
-
-                    return <Posts
-                        updateNewPostText={ onPostChange }
-                        addPost={ addPost }
-                        posts={ state.profilePage.posts }
-                        newPostText={ state.profilePage.newPostText }
-                    />;
-                }
-            }
-        </StoreContext.Consumer>
-    );
-};*/
 
 const mapStateToProps = (state) => {
     return {
@@ -39,11 +12,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        addPost: () => {
-            dispatch(addPostCreator())
-        },
-        updateNewPostText: (newText) => {
-            dispatch(updateNewPostTextCreator(newText))
+        addPost: (newPostText) => {
+            dispatch(addPostCreator(newPostText))
         }
     }
 }
