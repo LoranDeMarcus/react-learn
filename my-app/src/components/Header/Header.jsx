@@ -52,7 +52,7 @@ const Header = (props) => {
                 </ul>
                 <div className={ styles.panel }>
                     <h5 className={ styles.panel__title }>
-                        { props.isAuth ? props.login : <NavLink to={ '/login' }>Login</NavLink> }
+                        { props.isAuth ? <div>{ props.login } - <button onClick={props.logout}>Log out</button></div> : <NavLink to={ '/login' }>Login</NavLink> }
                     </h5>
                 </div>
                 <div className={ styles.login }>
