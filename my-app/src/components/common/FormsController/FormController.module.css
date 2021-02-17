@@ -1,0 +1,13 @@
+.formsController {
+    width: 90%;
+    margin-right: 15px;
+}
+.formsController.error input,
+.formsController.error textarea {
+    border: 1px solid red;
+}
+
+.formsController.error span {
+    display: inline-block;
+    color: red;
+}

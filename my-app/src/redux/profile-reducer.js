@@ -1,4 +1,4 @@
-import { ADD_POST, UPDATE_NEW_POST_TEXT, SET_USER_PROFILE, SET_USER_STATUS } from './types';
+import { ADD_POST, SET_USER_PROFILE, SET_USER_STATUS } from './types';
 import { profileAPI, usersAPI } from '../API/API';
 
 const initialState = {
@@ -24,26 +24,19 @@ const initialState = {
             message: '+rep'
         }
     ],
-    newPostText: '',
     profile: null,
     status: ''
 };
 
 export const profileReducer = (state = initialState, action) => {
     switch (action.type) {
-        case UPDATE_NEW_POST_TEXT: {
-            return {
-                ...state,
-                newPostText: action.newText
-            };
-        }
         case ADD_POST: {
             return {
                 ...state,
                 newPostText: '',
                 posts: [...state.posts, {
                     id: 6,
-                    message: state.newPostText
+                    message: action.newPostText
                 }]
             };
         }
@@ -64,16 +57,10 @@ export const profileReducer = (state = initialState, action) => {
     }
 };
 
-export const addPostCreator = () => {
+export const addPostCreator = (newPostText) => {
     return {
-        type: ADD_POST
-    };
-};
-
-export const updateNewPostTextCreator = (newText) => {
-    return {
-        type: UPDATE_NEW_POST_TEXT,
-        newText
+        type: ADD_POST,
+        newPostText
     };
 };
 
