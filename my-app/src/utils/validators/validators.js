@@ -4,6 +4,6 @@ export const requiredField = value => {
 };
 
 export const maxLengthCreator = (maxLength) => value => {
-    if (value && value.length > maxLength) return `Max length is much than ${maxLength} symbols`;
+    if (value && value.length > maxLength) return `Max length is much than ${ maxLength } symbols`;
     return undefined;
 };

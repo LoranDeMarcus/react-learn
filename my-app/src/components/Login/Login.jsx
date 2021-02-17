@@ -17,7 +17,7 @@ const LoginForm = (props) => {
                 <div>
                     <Field
                         component={ Input }
-                        validate={[requiredField]}
+                        validate={ [requiredField] }
                         type={ 'text' }
                         name={ 'login' }
                         placeholder={ 'Email' }
@@ -27,7 +27,7 @@ const LoginForm = (props) => {
                 <div>
                     <Field
                         component={ Input }
-                        validate={[requiredField]}
+                        validate={ [requiredField] }
                         type={ 'password' }
                         name={ 'password' }
                         placeholder={ 'Password' }
@@ -38,7 +38,7 @@ const LoginForm = (props) => {
                     <label className={ styles.checkboxLabel }>
                         <Field
                             component={ Input }
-                            validate={[requiredField]}
+                            validate={ [requiredField] }
                             type={ 'checkbox' }
                             name={ 'rememberMe' }
                             className={ styles.checkbox }
