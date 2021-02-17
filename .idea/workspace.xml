@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ffdf472d-3220-4381-bfd5-758f3e73821b" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="1nyhcxjl3isRsvJAm06IkocWVFb" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/my-app/src/components/avatars" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2020.1.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Projects\react-js\my-app\src\components\avatars" />
+      <recent name="E:\Projects\react-js\my-app\src\components\Users" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Projects\react-js\my-app\src\assets\images" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/my-app/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ffdf472d-3220-4381-bfd5-758f3e73821b" name="Default Changelist" comment="" />
+      <created>1612368322777</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1612368322777</updated>
+      <workItem from="1612368324855" duration="154000" />
+      <workItem from="1612445994295" duration="856000" />
+      <workItem from="1612449149430" duration="2550000" />
+      <workItem from="1612540465115" duration="2597000" />
+      <workItem from="1612609357090" duration="14782000" />
+      <workItem from="1612689041614" duration="11479000" />
+      <workItem from="1612791953116" duration="9483000" />
+      <workItem from="1612888203330" duration="4722000" />
+      <workItem from="1612974637370" duration="5482000" />
+      <workItem from="1613060743540" duration="5312000" />
+      <workItem from="1613206670283" duration="784000" />
+      <workItem from="1613406383233" duration="4502000" />
+      <workItem from="1613577609103" duration="520000" />
+    </task>
+    <task id="LOCAL-00001" summary="added axios and updated next lesson link">
+      <created>1612717712644</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1612717712644</updated>
+    </task>
+    <task id="LOCAL-00002" summary="refactored functional component User to class component">
+      <created>1612804286992</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1612804286992</updated>
+    </task>
+    <task id="LOCAL-00003" summary="added pagination. updated next lesson link">
+      <created>1612809062129</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1612809062129</updated>
+    </task>
+    <task id="LOCAL-00004" summary="some refactor">
+      <created>1612893684359</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1612893684359</updated>
+    </task>
+    <task id="LOCAL-00005" summary="made login">
+      <created>1612976566100</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1612976566100</updated>
+    </task>
+    <task id="LOCAL-00006" summary="crated API">
+      <created>1612980155178</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1612980155178</updated>
+    </task>
+    <task id="LOCAL-00007" summary="refactored all requests">
+      <created>1613068974368</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1613068974368</updated>
+    </task>
+    <task id="LOCAL-00008" summary="finished componentDidUpdate">
+      <created>1613409665790</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1613409665790</updated>
+    </task>
+    <task id="LOCAL-00009" summary="update next lesson link">
+      <created>1613411930012</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1613411930012</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+      </list>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added axios and updated next lesson link" />
+    <MESSAGE value="refactored functional component User to class component" />
+    <MESSAGE value="added pagination. updated next lesson link" />
+    <MESSAGE value="some refactor" />
+    <MESSAGE value="made login" />
+    <MESSAGE value="crated API" />
+    <MESSAGE value="refactored all requests" />
+    <MESSAGE value="finished componentDidUpdate" />
+    <MESSAGE value="update next lesson link" />
+    <option name="LAST_COMMIT_MESSAGE" value="update next lesson link" />
+  </component>
+</project>
