@@ -1,24 +1,60 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
+import { Element } from '../common/FormsController/FormController';
+import { requiredField } from '../../utils/validators/validators';
+
+import styles from './Login.module.css';
+
+const Input = Element('input');
 
 const LoginForm = (props) => {
     return (
-        <form onSubmit={ props.handleSubmit }>
-            <div>
-                <Field component={ 'input' } type={ 'text' } name={ 'login' } placeholder={ 'Email' } />
-            </div>
-            <div>
-                <Field component={ 'input' } type={ 'password' } name={ 'password' } placeholder={ 'Password' } />
-            </div>
-            <div>
-                <Field component={ 'input' } type={ 'checkbox' } name={ 'rememberMe' } /> remember me
-            </div>
-            <div>
-                <button type={ 'submit' }>
-                    Login
-                </button>
-            </div>
-        </form>
+        <div className={ styles.wrapper }>
+            <h2 className={ styles.title }>
+                <i className="fas fa-sign-in-alt" /> &nbsp;Login
+            </h2>
+            <form onSubmit={ props.handleSubmit }>
+                <div>
+                    <Field
+                        component={ Input }
+                        validate={[requiredField]}
+                        type={ 'text' }
+                        name={ 'login' }
+                        placeholder={ 'Email' }
+                        className={ styles.input }
+                    />
+                </div>
+                <div>
+                    <Field
+                        component={ Input }
+                        validate={[requiredField]}
+                        type={ 'password' }
+                        name={ 'password' }
+                        placeholder={ 'Password' }
+                        className={ styles.input }
+                    />
+                </div>
+                <div>
+                    <label className={ styles.checkboxLabel }>
+                        <Field
+                            component={ Input }
+                            validate={[requiredField]}
+                            type={ 'checkbox' }
+                            name={ 'rememberMe' }
+                            className={ styles.checkbox }
+                        /> &nbsp;remember me
+                    </label>
+                </div>
+                <div>
+                    <button
+                        type={ 'submit' }
+                        className={ styles.button }
+                    >
+                        Login
+                    </button>
+                </div>
+            </form>
+        </div>
     );
 };
 
@@ -30,10 +66,7 @@ const Login = (props) => {
     };
 
     return (
-        <>
-            <h1>Login</h1>
-            <LoginFormRedux onSubmit={ onSubmit } />
-        </>
+        <LoginFormRedux onSubmit={ onSubmit } />
     );
 };
 
