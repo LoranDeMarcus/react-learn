@@ -4,9 +4,10 @@ import { Element } from '../common/FormsController/FormController';
 import { requiredField } from '../../utils/validators/validators';
 import { connect } from 'react-redux';
 import { login } from '../../redux/auth-reducer';
+import { Redirect } from 'react-router';
 
 import styles from './Login.module.css';
-import { Redirect } from 'react-router';
+import style from '../common/FormsController/FormController.module.css';
 
 const Input = Element('input');
 
@@ -47,8 +48,11 @@ const LoginForm = (props) => {
                             className={ styles.checkbox }
                         /> &nbsp;remember me
                     </label>
-                </div>{/* TODO: добавить капчу*/}
+                </div>
+                { /* TODO: добавить капчу*/ }
+                { props.error ? <div className={ style.formSummaryError }>{ props.error }</div> : '' }
                 <div>
+                    { /*TODO: при сабмите редиректить на странцу профиля*/ }
                     <button
                         type={ 'submit' }
                         className={ styles.button }
@@ -69,7 +73,7 @@ const Login = (props) => {
     };
 
     if (props.isAuth) {
-        return <Redirect to={'/profile'} />
+        return <Redirect to={ '/profile' } />;
     }
 
     return (

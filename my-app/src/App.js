@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 
 import './normalize.css';
 import './App.css';
@@ -13,10 +13,21 @@ import UsersMain from './components/UsersMain/UsersMain';
 import Login from './components/Login/Login';
 
 import store from './redux/redux-store';
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router';
+import { compose } from 'redux';
+import { initializeApp } from './redux/app-reducer';
+import Preloader from './components/common/Preloader/Preloader';
 
-const App = () => {
-    return (
-        <BrowserRouter>
+class App extends React.Component {
+    componentDidMount() {
+        this.props.initializeApp();
+    }
+
+    render() {
+        if (!this.props.initialized) return <Preloader />;
+
+        return (
             <div className="App">
                 <HeaderContainer />
                 <FixedSidebar />
@@ -38,8 +49,12 @@ const App = () => {
                     } />
                 </div>
             </div>
-        </BrowserRouter>
-    );
-};
+        );
+    }
+}
 
-export default App;
+const mapStateToProps = (state) => ({
+    initialized: state.app.initialized
+});
+
+export default compose(withRouter, connect(mapStateToProps, { initializeApp }))(App);

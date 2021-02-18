@@ -11,3 +11,11 @@
     display: inline-block;
     color: red;
 }
+
+.formSummaryError {
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid red;
+    padding: 5px;
+    color: red;
+}

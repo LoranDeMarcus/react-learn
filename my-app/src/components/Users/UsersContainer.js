@@ -11,7 +11,6 @@ import Users from './Users';
 import Preloader from '../common/Preloader/Preloader';
 import { Redirect } from 'react-router';
 import { compose } from 'redux';
-import { withAuthRedirect } from '../../HOC/withAuthRedirect';
 
 class UsersContainer extends React.Component {
     componentDidMount() {
@@ -23,8 +22,6 @@ class UsersContainer extends React.Component {
     };
 
     render() {
-        if (this.props.isAuth === false) return <Redirect to='/login' />;
-
         return <>
             { this.props.isFetching ? <Preloader /> : null }
             <Users totalUsersCount={ this.props.totalUsersCount }
@@ -59,4 +56,5 @@ const dispatches = {
     toggleFollowing
 };
 
-export default compose(withAuthRedirect, connect(mapStateToProps, dispatches))(UsersContainer);
+export default compose(
+    connect(mapStateToProps, dispatches))(UsersContainer);

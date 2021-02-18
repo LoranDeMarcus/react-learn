@@ -1,4 +1,4 @@
-import { SEND_MESSAGE, UPDATE_NEW_MESSAGE_BODY } from './types';
+import { SEND_MESSAGE } from './types';
 
 import user1 from '../components/avatars/chatuser1.jpg';
 import user2 from '../components/avatars/chatuser2.jpg';
