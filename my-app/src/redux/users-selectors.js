@@ -3,23 +3,23 @@ export const getAllUsers = (state) => {
 }
 
 export const getPageSize = (state) => {
-    return state.pageSize.users;
+    return state.usersPage.pageSize;
 }
 
 export const getTotalUsersCount = (state) => {
-    return state.totalUsersCount.users;
+    return state.usersPage.totalUsersCount;
 }
 
 export const getCurrentPage = (state) => {
-    return state.currentPage.users;
+    return state.usersPage.currentPage;
 }
 
 export const getIsFetching = (state) => {
-    return state.isFetching.users;
+    return state.usersPage.isFetching;
 }
 
 export const getFollowingInProgress = (state) => {
-    return state.followingInProgress.users;
+    return state.usersPage.followingInProgress;
 }
 
 export const getIsAuth = (state) => {

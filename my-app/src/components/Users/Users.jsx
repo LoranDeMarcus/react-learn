@@ -11,16 +11,9 @@ const Users = (props) => {
     for (let i = 1; i <= pagesCount; i++) {
         pages.push(i);
     }
+
     return (
         <div>
-            <div>
-                {
-                    pages.map(page => {
-                        return <span onClick={ () => props.onPageChanged(page) }
-                                     className={ ` ${ styles.pagItem } ${ props.currentPage === page && styles.selected } ` }>{ page }</span>;
-                    })
-                }
-            </div>
             {
                 props.users.map(user => {
                     return <div key={ user.id } className={ styles.box }>
@@ -55,6 +48,14 @@ const Users = (props) => {
                     </div>;
                 })
             }
+            <div>
+                {
+                    pages.map(page => {
+                        return <span onClick={ () => props.onPageChanged(page) }
+                                     className={ ` ${ styles.pagItem } ${ props.currentPage === page && styles.selected } ` }>{ page }</span>;
+                    })
+                }
+            </div>
         </div>
     );
 };

@@ -15,7 +15,6 @@ class ProfileWrapperContainer extends React.Component {
                 this.props.history.push('/login');
             }
         }
-        console.log(this.props);
 
         this.props.getUsersProfile(userId);
         this.props.getUserStatus(userId);

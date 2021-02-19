@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ffdf472d-3220-4381-bfd5-758f3e73821b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/my-app/src/redux/users-selectors.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/ProfileWrapper/ProfileWrapperContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/ProfileWrapper/ProfileWrapperContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/Users/Users.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Users/Users.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/components/Users/UsersContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Users/UsersContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/redux/users-reducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/users-reducers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/redux/users-selectors.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/users-selectors.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,6 +99,8 @@
       <workItem from="1613577609103" duration="660000" />
       <workItem from="1613578294044" duration="23000" />
       <workItem from="1613578318854" duration="6273000" />
+      <workItem from="1613711763829" duration="471000" />
+      <workItem from="1613739697046" duration="2910000" />
     </task>
     <task id="LOCAL-00001" summary="added axios and updated next lesson link">
       <created>1612717712644</created>
@@ -173,7 +179,21 @@
       <option name="project" value="LOCAL" />
       <updated>1613659113293</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="selectors">
+      <created>1613659641311</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1613659641311</updated>
+    </task>
+    <task id="LOCAL-00013" summary="lesson timing">
+      <created>1613659656387</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1613659656387</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,6 +221,8 @@
     <MESSAGE value="update next lesson link" />
     <MESSAGE value="fix" />
     <MESSAGE value="finished with forms" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished with forms" />
+    <MESSAGE value="selectors" />
+    <MESSAGE value="lesson timing" />
+    <option name="LAST_COMMIT_MESSAGE" value="lesson timing" />
   </component>
 </project>
