@@ -4,12 +4,13 @@ import Block from '../Block/Block';
 import ProfileStatus from '../ProfileStatus/ProfileStatus';
 
 import styles from './Sidebar.module.css';
+import ProfileStatusWithHooks from '../ProfileStatus/ProfileStatusWithHooks';
 
 const Sidebar = (props) => {
     return (
         <aside className={ styles.block }>
             <Block title='Status'>
-                <ProfileStatus
+                <ProfileStatusWithHooks
                     status={ props.status }
                     updateUserStatus={ props.updateUserStatus }
                 />
