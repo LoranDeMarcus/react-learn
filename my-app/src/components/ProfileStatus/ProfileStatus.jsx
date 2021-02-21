@@ -13,7 +13,7 @@ class ProfileStatus extends React.Component {
         this.props.updateUserStatus(this.state.status);
     }
     onStatusChange = (e) => {
-        this.setState({
+        this.setStatus({
             status: e.currentTarget.value
         });
     }
@@ -34,7 +34,7 @@ class ProfileStatus extends React.Component {
                         <span onClick={ () => {
                             this.toggleEditMode();
                         }
-                        }>{ this.props.status || 'Изменить статус' }</span>
+                        }>{ this.props.status }</span>
                     </div>
                     :
                     <div>

@@ -3,10 +3,15 @@ import React, { useState } from 'react';
 const ProfileStatusWithHooks = (props) => {
 
     const [editMode, setEditMode] = useState(false);
+    const [status, setStatus] = useState(props.status);
 
     const toggleEditMode = () => {
         setEditMode(value => !value)
-        // props.updateUserStatus(this.state.status);
+        props.updateUserStatus(status);
+    }
+
+    const onStatusChange = (e) => {
+        setStatus(e.currentTarget.value);
     }
 
     return (
@@ -16,16 +21,15 @@ const ProfileStatusWithHooks = (props) => {
                 <span onClick={ () => {
                     toggleEditMode();
                 }
-                }>{ props.status || 'Изменить статус' }</span>
+                }>{ props.status || 'Change status' }</span>
             </div>
             }
             { editMode &&
             <div>
                 <input
-                    onBlur={() => {
-                        toggleEditMode();
-                    }
-                    }
+                    onChange={onStatusChange}
+                    onBlur={ () => toggleEditMode() }
+                    value={ status }
                     autoFocus={ true }/>
             </div>
             }

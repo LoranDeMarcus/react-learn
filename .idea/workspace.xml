@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ffdf472d-3220-4381-bfd5-758f3e73821b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/my-app/src/components/ProfileStatus/ProfileStatusWithHooks.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13_02_2021_11_59_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13_02_2021_11_59__Default_Changelist_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Sidebar/Sidebar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Sidebar/Sidebar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/ProfileStatus/ProfileStatus.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/ProfileStatus/ProfileStatus.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/ProfileStatus/ProfileStatusWithHooks.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/ProfileStatus/ProfileStatusWithHooks.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/redux/profile-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/profile-reducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,8 +99,8 @@
       <workItem from="1613577609103" duration="660000" />
       <workItem from="1613578294044" duration="23000" />
       <workItem from="1613578318854" duration="6273000" />
-      <workItem from="1613711763829" duration="471000" />
-      <workItem from="1613739697046" duration="6057000" />
+      <workItem from="1613834934045" duration="1288000" />
+      <workItem from="1613906280297" duration="2715000" />
     </task>
     <task id="LOCAL-00001" summary="added axios and updated next lesson link">
       <created>1612717712644</created>
@@ -171,35 +172,7 @@
       <option name="project" value="LOCAL" />
       <updated>1613578208252</updated>
     </task>
-    <task id="LOCAL-00011" summary="finished with forms">
-      <created>1613659113293</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1613659113293</updated>
-    </task>
-    <task id="LOCAL-00012" summary="selectors">
-      <created>1613659641311</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1613659641311</updated>
-    </task>
-    <task id="LOCAL-00013" summary="lesson timing">
-      <created>1613659656387</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1613659656387</updated>
-    </task>
-    <task id="LOCAL-00014" summary="some refactor">
-      <created>1613742623550</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1613742623550</updated>
-    </task>
-    <option name="localTasksCounter" value="15" />
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,16 +192,13 @@
     <MESSAGE value="added axios and updated next lesson link" />
     <MESSAGE value="refactored functional component User to class component" />
     <MESSAGE value="added pagination. updated next lesson link" />
+    <MESSAGE value="some refactor" />
     <MESSAGE value="made login" />
     <MESSAGE value="crated API" />
     <MESSAGE value="refactored all requests" />
     <MESSAGE value="finished componentDidUpdate" />
     <MESSAGE value="update next lesson link" />
     <MESSAGE value="fix" />
-    <MESSAGE value="finished with forms" />
-    <MESSAGE value="selectors" />
-    <MESSAGE value="lesson timing" />
-    <MESSAGE value="some refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="some refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix" />
   </component>
 </project>

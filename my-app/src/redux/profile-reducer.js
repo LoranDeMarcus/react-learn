@@ -90,7 +90,7 @@ export const getUserStatus = (userId) => {
     return (dispatch) => {
         profileAPI.getUserStatus(userId).then(data => {
             if (!data) {
-                data = 'Изменить статус';
+                data = 'Change status';
                 dispatch(setUserStatus(data));
             }
             dispatch(setUserStatus(data));
