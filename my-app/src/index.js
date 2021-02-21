@@ -25,4 +25,4 @@ ReactDOM.render(
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
 
-// next lesson: https://www.youtube.com/watch?v=EbqQg0K4wbo&list=PLcvhF2Wqh7DNVy1OCUpG3i5lyxyBWhGZ8&index=85 27.30
+// next lesson: https://www.youtube.com/watch?list=PLcvhF2Wqh7DNVy1OCUpG3i5lyxyBWhGZ8&v=rsW9_UtF4jk

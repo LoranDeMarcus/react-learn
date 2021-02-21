@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ffdf472d-3220-4381-bfd5-758f3e73821b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13_02_2021_11_59_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13_02_2021_11_59__Default_Changelist_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/ProfileStatus/ProfileStatus.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/ProfileStatus/ProfileStatus.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/components/ProfileStatus/ProfileStatusWithHooks.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/ProfileStatus/ProfileStatusWithHooks.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/redux/profile-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/profile-reducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +96,7 @@
       <workItem from="1613578294044" duration="23000" />
       <workItem from="1613578318854" duration="6273000" />
       <workItem from="1613834934045" duration="1288000" />
-      <workItem from="1613906280297" duration="2715000" />
+      <workItem from="1613906280297" duration="4737000" />
     </task>
     <task id="LOCAL-00001" summary="added axios and updated next lesson link">
       <created>1612717712644</created>
@@ -172,7 +168,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613578208252</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="added useState hook">
+      <created>1613914478844</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1613914478844</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,6 +202,7 @@
     <MESSAGE value="finished componentDidUpdate" />
     <MESSAGE value="update next lesson link" />
     <MESSAGE value="fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix" />
+    <MESSAGE value="added useState hook" />
+    <option name="LAST_COMMIT_MESSAGE" value="added useState hook" />
   </component>
 </project>

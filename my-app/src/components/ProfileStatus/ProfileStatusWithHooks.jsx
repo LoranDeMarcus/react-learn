@@ -1,9 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const ProfileStatusWithHooks = (props) => {
 
     const [editMode, setEditMode] = useState(false);
     const [status, setStatus] = useState(props.status);
+
+    useEffect(() => {
+        setStatus(props.status);
+    }, [props.status]);
 
     const toggleEditMode = () => {
         setEditMode(value => !value)
@@ -21,7 +25,7 @@ const ProfileStatusWithHooks = (props) => {
                 <span onClick={ () => {
                     toggleEditMode();
                 }
-                }>{ props.status || 'Change status' }</span>
+                }>{ props.status }</span>
             </div>
             }
             { editMode &&
