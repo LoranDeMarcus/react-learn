@@ -11,7 +11,7 @@ const Textarea = Element('textarea');
 
 const Posts = (props) => {
     const messages = props.posts.map(item =>
-        <Post message={ item.message } />
+        <Post key={item.id} message={ item.message } />
     ).reverse();
 
     const onAddPost = (values) => {

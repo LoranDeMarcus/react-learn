@@ -7,7 +7,8 @@ import styles from './Dialogs.module.css';
 const Dialogs = (props) => {
     const state = props.store.getState();
     const dialogsData = state.messagesPage.dialogs.map(dialog =>
-        <User path={ `/messages/${ dialog.id }` }
+        <User key={ dialog.id }
+              path={ `/messages/${ dialog.id }` }
               id={ dialog.id }
               avatar={ dialog.avatar }
               online={ dialog.online }

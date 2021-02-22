@@ -10,7 +10,7 @@ const Chat = (props) => {
     if (!props.isAuth) return <Redirect to='/login' />;
 
     const messagesElements = props.messagesPage.map(message => {
-        return <Message data={ props.dialogs } message={ message.message } /* todo: переделать структура state */
+        return <Message key={message.id} data={ props.dialogs } message={ message.message } /* todo: переделать структура state */
                         time={ message.time } />;
     });
 
