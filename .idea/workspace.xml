@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ffdf472d-3220-4381-bfd5-758f3e73821b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/my-app/src/components/Users/User.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Dialogs/Chat/Chat.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Dialogs/Chat/Chat.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Dialogs/Dialogs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Dialogs/Dialogs.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Posts/Posts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Posts/Posts.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Users/Users.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Users/Users.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Users/UsersContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Users/UsersContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +100,7 @@
       <workItem from="1613578318854" duration="6273000" />
       <workItem from="1613834934045" duration="1288000" />
       <workItem from="1613906280297" duration="5042000" />
-      <workItem from="1613980368529" duration="7007000" />
+      <workItem from="1613980368529" duration="8980000" />
     </task>
     <task id="LOCAL-00001" summary="added axios and updated next lesson link">
       <created>1612717712644</created>
@@ -191,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613919615249</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="added keys on iterable components">
+      <created>1613999157392</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1613999157392</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,6 +222,8 @@
     <MESSAGE value="fix" />
     <MESSAGE value="added useState hook" />
     <MESSAGE value="added useEffect, updated next lesson link" />
-    <option name="LAST_COMMIT_MESSAGE" value="added useEffect, updated next lesson link" />
+    <MESSAGE value="added key on iterable components" />
+    <MESSAGE value="added keys on iterable components" />
+    <option name="LAST_COMMIT_MESSAGE" value="added keys on iterable components" />
   </component>
 </project>
