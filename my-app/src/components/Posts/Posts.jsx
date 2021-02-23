@@ -9,9 +9,9 @@ import styles from './Posts.module.css';
 const maxLength10 = maxLengthCreator(10);
 const Textarea = Element('textarea');
 
-const Posts = (props) => {
-    const messages = props.posts.map(item =>
-        <Post key={item.id} message={ item.message } />
+const Posts = props => {
+    const messages = [...props.posts].map(item =>
+        <Post key={ item.id } message={ item.message } />
     ).reverse();
 
     const onAddPost = (values) => {

@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ffdf472d-3220-4381-bfd5-758f3e73821b" name="Default Changelist" comment="">
+    <list default="true" id="ffdf472d-3220-4381-bfd5-758f3e73821b" name="Default Changelist" comment="added tests for profile reducer">
+      <change afterPath="$PROJECT_DIR$/my-app/src/redux/profile-reducer.test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/Posts/Posts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Posts/Posts.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/redux/profile-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/profile-reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/redux/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/types.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,13 +40,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../react" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/my-app/src/redux" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/my-app/node_modules/react-scripts" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2020.1.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
@@ -51,6 +55,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Projects\react-js\my-app\src\redux" />
       <recent name="E:\Projects\react-js\my-app\src\components\avatars" />
       <recent name="E:\Projects\react-js\my-app\src\components\Users" />
     </key>
@@ -58,12 +63,64 @@
       <recent name="E:\Projects\react-js\my-app\src\assets\images" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Jest.posts length after deleting shouldn't be decremented if postId incorrect">
+    <configuration name="message of new post should be correct" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/my-app/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$/my-app" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/my-app/src/redux/profile-reducer.test.js" />
+      <test-names>
+        <test-name value="message of new post should be correct" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="posts length after deleting should be decremented" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/my-app/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$/my-app" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/my-app/src/redux/profile-reducer.test.js" />
+      <test-names>
+        <test-name value="posts length after deleting should be decremented" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="posts length after deleting shouldn't be decremented if postId incorrect" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/my-app/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$/my-app" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/my-app/src/redux/profile-reducer.test.js" />
+      <test-names>
+        <test-name value="posts length after deleting shouldn't be decremented if postId incorrect" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="posts length should be incremented" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/my-app/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$/my-app" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/my-app/src/redux/profile-reducer.test.js" />
+      <test-names>
+        <test-name value="posts length should be incremented" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/my-app/package.json" />
       <command value="run" />
       <scripts>
-        <script value="start" />
+        <script value="test" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -71,7 +128,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.start" />
+        <item itemvalue="Jest.posts length after deleting shouldn't be decremented if postId incorrect" />
+        <item itemvalue="Jest.posts length after deleting should be decremented" />
+        <item itemvalue="Jest.message of new post should be correct" />
+        <item itemvalue="npm.test" />
+        <item itemvalue="Jest.posts length should be incremented" />
       </list>
     </recent_temporary>
   </component>
@@ -100,7 +161,8 @@
       <workItem from="1613578318854" duration="6273000" />
       <workItem from="1613834934045" duration="1288000" />
       <workItem from="1613906280297" duration="5042000" />
-      <workItem from="1613980368529" duration="8980000" />
+      <workItem from="1613980368529" duration="9598000" />
+      <workItem from="1614085155592" duration="5555000" />
     </task>
     <task id="LOCAL-00001" summary="added axios and updated next lesson link">
       <created>1612717712644</created>
@@ -193,7 +255,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613999157392</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="updated lesson link">
+      <created>1614008606459</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1614008606459</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,6 +293,7 @@
     <MESSAGE value="added useEffect, updated next lesson link" />
     <MESSAGE value="added key on iterable components" />
     <MESSAGE value="added keys on iterable components" />
-    <option name="LAST_COMMIT_MESSAGE" value="added keys on iterable components" />
+    <MESSAGE value="updated lesson link" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated lesson link" />
   </component>
 </project>
