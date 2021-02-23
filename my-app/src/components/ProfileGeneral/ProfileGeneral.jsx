@@ -1,5 +1,5 @@
 import React from 'react';
-import Block from '../Block/Block';
+import Block from '../common/Block/Block';
 
 import styles from './ProfileGeneral.module.css';
 import MetaInfo from '../MetaInfo/MetaInfo';

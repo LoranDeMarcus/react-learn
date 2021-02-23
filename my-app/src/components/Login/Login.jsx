@@ -11,13 +11,13 @@ import style from '../common/FormsController/FormController.module.css';
 
 const Input = Element('input');
 
-const LoginForm = (props) => {
+const LoginForm = ({handleSubmit, error}) => {
     return (
         <div className={ styles.wrapper }>
             <h2 className={ styles.title }>
                 <i className="fas fa-sign-in-alt" /> &nbsp;Login
             </h2>
-            <form onSubmit={ props.handleSubmit }>
+            <form onSubmit={ handleSubmit }>
                 <div>
                     <Field
                         component={ Input }
@@ -50,7 +50,7 @@ const LoginForm = (props) => {
                     </label>
                 </div>
                 { /* TODO: добавить капчу*/ }
-                { props.error ? <div className={ style.formSummaryError }>{ props.error }</div> : '' }
+                { error ? <div className={ style.formSummaryError }>{ error }</div> : '' }
                 <div>
                     { /*TODO: при сабмите редиректить на странцу профиля*/ }
                     <button

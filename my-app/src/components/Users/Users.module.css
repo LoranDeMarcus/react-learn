@@ -108,18 +108,3 @@
 .button:disabled:hover {
     opacity: 1;
 }
-
-.pagItem {
-    display: inline-block;
-    padding: 10px;
-    cursor: pointer;
-    transition: all 0.3s;
-}
-
-.pagItem:hover {
-    opacity: 0.7;
-}
-
-.selected {
-    font-weight: 800;
-}

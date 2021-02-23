@@ -5,10 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ffdf472d-3220-4381-bfd5-758f3e73821b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/my-app/src/components/common/Paginator/Paginator.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-app/src/components/common/Paginator/Paginator.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-app/src/utils/objects-helper.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/redux/auth-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/auth-reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/redux/profile-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/profile-reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/redux/users-reducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/users-reducers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/Block/Block.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/common/Block/Block.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/Block/Block.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/common/Block/Block.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/Login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Login/Login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/ProfileGeneral/ProfileGeneral.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/ProfileGeneral/ProfileGeneral.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/Sidebar/Sidebar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Sidebar/Sidebar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/Users/Users.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Users/Users.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/Users/Users.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Users/Users.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/Users/UsersContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Users/UsersContainer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +67,8 @@
       <recent name="E:\Projects\react-js\my-app\src\components\Users" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Projects\react-js\my-app\src\components\common" />
+      <recent name="E:\Projects\react-js\my-app\src\components\common\Paginator" />
       <recent name="E:\Projects\react-js\my-app\src\assets\images" />
     </key>
   </component>
@@ -161,7 +171,7 @@
       <workItem from="1613834934045" duration="1288000" />
       <workItem from="1613906280297" duration="5042000" />
       <workItem from="1613980368529" duration="9598000" />
-      <workItem from="1614085155592" duration="7057000" />
+      <workItem from="1614085155592" duration="10724000" />
     </task>
     <task id="LOCAL-00001" summary="added axios and updated next lesson link">
       <created>1612717712644</created>
@@ -268,7 +278,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614091251431</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="refactored reducers: async await">
+      <created>1614094610287</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1614094610287</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -301,6 +318,7 @@
     <MESSAGE value="added keys on iterable components" />
     <MESSAGE value="updated lesson link" />
     <MESSAGE value="added tests for profile reducer" />
-    <option name="LAST_COMMIT_MESSAGE" value="added tests for profile reducer" />
+    <MESSAGE value="refactored reducers: async await" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactored reducers: async await" />
   </component>
 </project>
