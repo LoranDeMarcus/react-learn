@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ffdf472d-3220-4381-bfd5-758f3e73821b" name="Default Changelist" comment="added tests for profile reducer">
-      <change afterPath="$PROJECT_DIR$/my-app/src/redux/profile-reducer.test.js" afterDir="false" />
+    <list default="true" id="ffdf472d-3220-4381-bfd5-758f3e73821b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Posts/Posts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Posts/Posts.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/redux/auth-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/auth-reducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/redux/profile-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/profile-reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/redux/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/types.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/redux/users-reducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/users-reducers.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +161,7 @@
       <workItem from="1613834934045" duration="1288000" />
       <workItem from="1613906280297" duration="5042000" />
       <workItem from="1613980368529" duration="9598000" />
-      <workItem from="1614085155592" duration="5555000" />
+      <workItem from="1614085155592" duration="7057000" />
     </task>
     <task id="LOCAL-00001" summary="added axios and updated next lesson link">
       <created>1612717712644</created>
@@ -262,7 +261,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614008606459</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="added tests for profile reducer">
+      <created>1614091251431</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1614091251431</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -294,6 +300,7 @@
     <MESSAGE value="added key on iterable components" />
     <MESSAGE value="added keys on iterable components" />
     <MESSAGE value="updated lesson link" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated lesson link" />
+    <MESSAGE value="added tests for profile reducer" />
+    <option name="LAST_COMMIT_MESSAGE" value="added tests for profile reducer" />
   </component>
 </project>

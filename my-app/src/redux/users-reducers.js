@@ -3,8 +3,8 @@ import {
     SET_USERS,
     TOGGLE_FOLLOW,
     TOGGLE_IS_FETCHING,
-    TOGGLE_PAGE,
-    TOGGLE_IS_FOLLOWING_PROGRESS
+    TOGGLE_IS_FOLLOWING_PROGRESS,
+    TOGGLE_PAGE
 } from './types';
 import { usersAPI } from '../API/API';
 
@@ -100,31 +100,24 @@ export const toggleFollowingProgress = (isFetching, id) => ({
     type: TOGGLE_IS_FOLLOWING_PROGRESS,
     isFetching,
     id
-})
+});
 
-export const getUsers = (page, pageSize) => {
-    return (dispatch) => {
-        dispatch(toggleIsFetching(true));
-        dispatch(togglePage(page));
+export const getUsers = (page, pageSize) => async (dispatch) => {
+    dispatch(toggleIsFetching(true));
+    dispatch(togglePage(page));
 
-        usersAPI.getUsersRequest(page, pageSize).then(data => {
-            dispatch(toggleIsFetching(false));
-            dispatch(setUsers(data.items));
-            dispatch(setTotalUsersCount(data.totalCount > 100 ? 100 : data.totalCount));
-        });
+    const response = await usersAPI.getUsersRequest(page, pageSize);
+    dispatch(toggleIsFetching(false));
+    dispatch(setUsers(response.items));
+    dispatch(setTotalUsersCount(response.totalCount > 100 ? 100 : response.totalCount));
+};
+
+export const toggleFollowing = (id) => async (dispatch) => {
+    dispatch(toggleFollowingProgress(true, id));
+
+    const response = await usersAPI.toggleFollow(id);
+    if (response.resultCode === 0) {
+        dispatch(toggleFollow(id));
     }
-}
-
-export const toggleFollowing = (id) => {
-    return (dispatch) => {
-        dispatch(toggleFollowingProgress(true, id));
-
-        usersAPI.toggleFollow(id).then(data => {
-            console.log(data);
-            if (data.resultCode === 0) {
-                dispatch(toggleFollow(id));
-            }
-            dispatch(toggleFollowingProgress(false, id));
-        });
-    }
-}
+    dispatch(toggleFollowingProgress(false, id));
+};
