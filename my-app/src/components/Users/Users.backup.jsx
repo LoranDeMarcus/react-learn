@@ -1,6 +1,6 @@
 import React from 'react';
 import * as axios from 'axios';
-import styles from './Users.module.css';
+import styles from './User.module.css';
 import defaultImg from '../../assets/images/defaultImg.png';
 
 const UsersBackup = (props) => {

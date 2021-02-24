@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ffdf472d-3220-4381-bfd5-758f3e73821b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/my-app/src/components/ProfileStatus/ProfileStatus.test.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/ProfileStatus/ProfileStatus.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/ProfileStatus/ProfileStatus.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-app/src/components/Users/User.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/Users/User.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Users/User.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/Users/Users.backup.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Users/Users.backup.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/Users/Users.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Users/Users.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -271,7 +271,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614173056761</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="added test for ProfileStatus.jsx">
+      <created>1614176185652</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1614176185652</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -302,6 +309,7 @@
     <MESSAGE value="lesson timing" />
     <MESSAGE value="some refactor" />
     <MESSAGE value="added redux extension. fixed profile status" />
-    <option name="LAST_COMMIT_MESSAGE" value="added redux extension. fixed profile status" />
+    <MESSAGE value="added test for ProfileStatus.jsx" />
+    <option name="LAST_COMMIT_MESSAGE" value="added test for ProfileStatus.jsx" />
   </component>
 </project>

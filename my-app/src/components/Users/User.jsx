@@ -3,7 +3,7 @@ import defaultBg from '../../assets/images/defaultBg.jpg';
 import { NavLink } from 'react-router-dom';
 import defaultImg from '../../assets/images/defaultImg.png';
 
-import styles from './Users.module.css';
+import styles from './User.module.css';
 
 const User = (props) => {
     return (
