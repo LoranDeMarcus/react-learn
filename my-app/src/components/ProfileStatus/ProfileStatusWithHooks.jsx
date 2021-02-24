@@ -25,7 +25,7 @@ const ProfileStatusWithHooks = (props) => {
                 <span onClick={ () => {
                     toggleEditMode();
                 }
-                }>{ props.status }</span>
+                }>{ props.status ? props.status : 'Change status' }</span>
             </div>
             }
             { editMode &&
