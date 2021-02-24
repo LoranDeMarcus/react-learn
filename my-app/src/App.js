@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Route } from 'react-router-dom';
 
 import './normalize.css';
@@ -8,8 +8,7 @@ import HeaderContainer from './components/Header/HeaderContainer';
 import FixedSidebar from './components/FixedSidebar/FixedSidebar';
 import Newsfeed from './components/Newsfeed/Newsfeed';
 import ProfileMain from './components/ProfileMain/ProfileMain';
-import Dialogs from './components/Dialogs/Dialogs';
-import UsersMain from './components/UsersMain/UsersMain';
+
 import Login from './components/Login/Login';
 
 import store from './redux/redux-store';
@@ -18,6 +17,11 @@ import { withRouter } from 'react-router';
 import { compose } from 'redux';
 import { initializeApp } from './redux/app-reducer';
 import Preloader from './components/common/Preloader/Preloader';
+
+// import Dialogs from './components/Dialogs/Dialogs';
+// import UsersMain from './components/UsersMain/UsersMain';
+const Dialogs = React.lazy(() => import ('./components/Dialogs/Dialogs'));
+const UsersMain = React.lazy(() => import ('./components/UsersMain/UsersMain'));
 
 class App extends React.Component {
     componentDidMount() {
@@ -38,12 +42,14 @@ class App extends React.Component {
                     <Route path='/profile/:userId?' render={ () =>
                         <ProfileMain store={ store } />
                     } />
-                    <Route path='/messages' render={ () =>
-                        <Dialogs store={ store } />
-                    } />
-                    <Route path='/friends' render={ () =>
-                        <UsersMain />
-                    } />
+                    <Suspense fallback={ <Preloader /> }>
+                        <Route path='/messages' render={ () =>
+                            <Dialogs store={ store } />
+                        } />
+                        <Route path='/friends' render={ () =>
+                            <UsersMain />
+                        } />
+                    </Suspense>
                     <Route path='/login' render={ () =>
                         <Login />
                     } />

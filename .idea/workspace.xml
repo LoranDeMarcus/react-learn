@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="ffdf472d-3220-4381-bfd5-758f3e73821b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/my-app/src/components/Users/User.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Users/User.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Users/User.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Users/Users.backup.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Users/Users.backup.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Users/Users.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Users/Users.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/Users/Users.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Users/Users.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,7 +39,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/my-app/src/components/ProfileStatus" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/my-app/src/redux" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -52,91 +54,83 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/my-app/src/components/ProfileStatus" />
+      <recent name="E:\Projects\react-js\my-app\src\redux" />
       <recent name="E:\Projects\react-js\my-app\src\components\avatars" />
       <recent name="E:\Projects\react-js\my-app\src\components\Users" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Projects\react-js\my-app\src\components\common" />
+      <recent name="E:\Projects\react-js\my-app\src\components\common\Paginator" />
       <recent name="E:\Projects\react-js\my-app\src\assets\images" />
     </key>
   </component>
-  <component name="RunManager" selected="Jest.ProfileStatus component">
-    <configuration name="ProfileStatus component" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/my-app/node_modules/react-scripts" />
-      <working-dir value="$PROJECT_DIR$/my-app" />
-      <envs />
-      <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/my-app/src/components/ProfileStatus/ProfileStatus.test.jsx" />
-      <test-names>
-        <test-name value="ProfileStatus component" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="ProfileStatus component.`after creation &lt;input&gt; shouldn't be displayed```" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="npm.start">
+    <configuration name="message of new post should be correct" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/my-app/node_modules/react-scripts" />
       <working-dir value="$PROJECT_DIR$/my-app" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/my-app/src/components/ProfileStatus/ProfileStatus.test.jsx" />
+      <test-file value="$PROJECT_DIR$/my-app/src/redux/profile-reducer.test.js" />
       <test-names>
-        <test-name value="ProfileStatus component" />
-        <test-name value="`after creation &lt;input&gt; shouldn't be displayed```" />
+        <test-name value="message of new post should be correct" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="ProfileStatus component.&lt;inpu&gt; should be displayed in editMode instead of span" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="posts length after deleting should be decremented" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/my-app/node_modules/react-scripts" />
       <working-dir value="$PROJECT_DIR$/my-app" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/my-app/src/components/ProfileStatus/ProfileStatus.test.jsx" />
+      <test-file value="$PROJECT_DIR$/my-app/src/redux/profile-reducer.test.js" />
       <test-names>
-        <test-name value="ProfileStatus component" />
-        <test-name value="&lt;inpu&gt; should be displayed in editMode instead of span" />
+        <test-name value="posts length after deleting should be decremented" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="ProfileStatus component.&lt;input&gt; should be displayed in editMode instead of span" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="posts length after deleting shouldn't be decremented if postId incorrect" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/my-app/node_modules/react-scripts" />
       <working-dir value="$PROJECT_DIR$/my-app" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/my-app/src/components/ProfileStatus/ProfileStatus.test.jsx" />
+      <test-file value="$PROJECT_DIR$/my-app/src/redux/profile-reducer.test.js" />
       <test-names>
-        <test-name value="ProfileStatus component" />
-        <test-name value="&lt;input&gt; should be displayed in editMode instead of span" />
+        <test-name value="posts length after deleting shouldn't be decremented if postId incorrect" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="ProfileStatus component.after creation &lt;input&gt; shouldn't be displayed" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/my-app/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
       <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/my-app/node_modules/react-scripts" />
-      <working-dir value="$PROJECT_DIR$/my-app" />
       <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/my-app/src/components/ProfileStatus/ProfileStatus.test.jsx" />
-      <test-names>
-        <test-name value="ProfileStatus component" />
-        <test-name value="after creation &lt;input&gt; shouldn't be displayed" />
-      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/my-app/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Jest.ProfileStatus component" />
-        <item itemvalue="Jest.ProfileStatus component.&lt;input&gt; should be displayed in editMode instead of span" />
-        <item itemvalue="Jest.ProfileStatus component.&lt;inpu&gt; should be displayed in editMode instead of span" />
-        <item itemvalue="Jest.ProfileStatus component.after creation &lt;input&gt; shouldn't be displayed" />
-        <item itemvalue="Jest.ProfileStatus component.`after creation &lt;input&gt; shouldn't be displayed```" />
+        <item itemvalue="npm.start" />
+        <item itemvalue="Jest.posts length after deleting shouldn't be decremented if postId incorrect" />
+        <item itemvalue="Jest.posts length after deleting should be decremented" />
+        <item itemvalue="Jest.message of new post should be correct" />
+        <item itemvalue="npm.test" />
       </list>
     </recent_temporary>
   </component>
@@ -163,8 +157,10 @@
       <workItem from="1613577609103" duration="660000" />
       <workItem from="1613578294044" duration="23000" />
       <workItem from="1613578318854" duration="6273000" />
-      <workItem from="1613711763829" duration="471000" />
-      <workItem from="1613739697046" duration="6057000" />
+      <workItem from="1613834934045" duration="1288000" />
+      <workItem from="1613906280297" duration="5042000" />
+      <workItem from="1613980368529" duration="9598000" />
+      <workItem from="1614085155592" duration="10724000" />
     </task>
     <task id="LOCAL-00001" summary="added axios and updated next lesson link">
       <created>1612717712644</created>
@@ -236,47 +232,47 @@
       <option name="project" value="LOCAL" />
       <updated>1613578208252</updated>
     </task>
-    <task id="LOCAL-00011" summary="finished with forms">
-      <created>1613659113293</created>
+    <task id="LOCAL-00011" summary="added useState hook">
+      <created>1613914478844</created>
       <option name="number" value="00011" />
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
-      <updated>1613659113293</updated>
+      <updated>1613914478844</updated>
     </task>
-    <task id="LOCAL-00012" summary="selectors">
-      <created>1613659641311</created>
+    <task id="LOCAL-00012" summary="added useEffect, updated next lesson link">
+      <created>1613919615249</created>
       <option name="number" value="00012" />
       <option name="presentableId" value="LOCAL-00012" />
       <option name="project" value="LOCAL" />
-      <updated>1613659641311</updated>
+      <updated>1613919615249</updated>
     </task>
-    <task id="LOCAL-00013" summary="lesson timing">
-      <created>1613659656387</created>
+    <task id="LOCAL-00013" summary="added keys on iterable components">
+      <created>1613999157392</created>
       <option name="number" value="00013" />
       <option name="presentableId" value="LOCAL-00013" />
       <option name="project" value="LOCAL" />
-      <updated>1613659656387</updated>
+      <updated>1613999157392</updated>
     </task>
-    <task id="LOCAL-00014" summary="some refactor">
-      <created>1613742623550</created>
+    <task id="LOCAL-00014" summary="updated lesson link">
+      <created>1614008606459</created>
       <option name="number" value="00014" />
       <option name="presentableId" value="LOCAL-00014" />
       <option name="project" value="LOCAL" />
-      <updated>1613742623550</updated>
+      <updated>1614008606459</updated>
     </task>
-    <task id="LOCAL-00015" summary="added redux extension. fixed profile status">
-      <created>1614173056761</created>
+    <task id="LOCAL-00015" summary="added tests for profile reducer">
+      <created>1614091251431</created>
       <option name="number" value="00015" />
       <option name="presentableId" value="LOCAL-00015" />
       <option name="project" value="LOCAL" />
-      <updated>1614173056761</updated>
+      <updated>1614091251431</updated>
     </task>
-    <task id="LOCAL-00016" summary="added test for ProfileStatus.jsx">
-      <created>1614176185652</created>
+    <task id="LOCAL-00016" summary="refactored reducers: async await">
+      <created>1614094610287</created>
       <option name="number" value="00016" />
       <option name="presentableId" value="LOCAL-00016" />
       <option name="project" value="LOCAL" />
-      <updated>1614176185652</updated>
+      <updated>1614094610287</updated>
     </task>
     <option name="localTasksCounter" value="17" />
     <servers />
@@ -298,18 +294,20 @@
     <MESSAGE value="added axios and updated next lesson link" />
     <MESSAGE value="refactored functional component User to class component" />
     <MESSAGE value="added pagination. updated next lesson link" />
+    <MESSAGE value="some refactor" />
     <MESSAGE value="made login" />
     <MESSAGE value="crated API" />
     <MESSAGE value="refactored all requests" />
     <MESSAGE value="finished componentDidUpdate" />
     <MESSAGE value="update next lesson link" />
     <MESSAGE value="fix" />
-    <MESSAGE value="finished with forms" />
-    <MESSAGE value="selectors" />
-    <MESSAGE value="lesson timing" />
-    <MESSAGE value="some refactor" />
-    <MESSAGE value="added redux extension. fixed profile status" />
-    <MESSAGE value="added test for ProfileStatus.jsx" />
-    <option name="LAST_COMMIT_MESSAGE" value="added test for ProfileStatus.jsx" />
+    <MESSAGE value="added useState hook" />
+    <MESSAGE value="added useEffect, updated next lesson link" />
+    <MESSAGE value="added key on iterable components" />
+    <MESSAGE value="added keys on iterable components" />
+    <MESSAGE value="updated lesson link" />
+    <MESSAGE value="added tests for profile reducer" />
+    <MESSAGE value="refactored reducers: async await" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactored reducers: async await" />
   </component>
 </project>

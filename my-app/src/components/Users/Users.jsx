@@ -2,6 +2,8 @@ import React from 'react';
 import User from './User';
 import Paginator from '../common/Paginator/Paginator';
 
+import styles from './Users.module.css';
+
 const Users = ({ totalUsersCount, pageSize, users, toggleFollowing, followingInProgress, onPageChanged, currentPage }) => {
     const pagesCount = Math.ceil(totalUsersCount / pageSize);
     const pages = [];
@@ -31,7 +33,7 @@ const Users = ({ totalUsersCount, pageSize, users, toggleFollowing, followingInP
     return (
         <div>
             { allUsers }
-            <div>
+            <div className={styles.pagination}>
                 { paginator }
             </div>
         </div>
