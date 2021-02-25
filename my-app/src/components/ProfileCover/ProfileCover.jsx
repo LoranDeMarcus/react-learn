@@ -12,7 +12,7 @@ const ProfileCover = (props) => {
                 <Upload className="pp" />
                 <img src={ profileImg } alt="Background" className={ styles.img } />
             </figure>
-            <Author profile={props.profile} />
+            <Author isOwner={props.isOwner} profile={props.profile} savePhoto={props.savePhoto} />
         </div>
     );
 };

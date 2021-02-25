@@ -36,6 +36,13 @@ export const profileAPI = {
     },
     updateUserStatus(status) {
         return axiosInstance.put(`profile/status`, { status });
+    },
+    savePhoto(photoFile) {
+        const formData = new FormData();
+        formData.append('image', photoFile)
+        return axiosInstance.put('profile/photo', formData, {
+            'Content-Type': 'multipart/form-data'
+        });
     }
 }
 

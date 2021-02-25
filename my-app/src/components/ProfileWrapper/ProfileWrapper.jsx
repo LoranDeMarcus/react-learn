@@ -10,7 +10,7 @@ const ProfileWrapper = (props) => {
 
     return (
         <>
-            <ProfileCover profile={ props.profile } />
+            <ProfileCover isOwner={props.isOwner} profile={ props.profile } savePhoto={props.savePhoto} />
             <ProfileContent
                 profile={ props.profile }
                 status={ props.status }

@@ -10,9 +10,9 @@ const Author = (props) => {
         <div className={ styles.section }>
             <div className={ styles.block }>
                 <div className={ styles.thumb }>
-                    <Upload className="dp" /> {/* TODO: тут разобраться как передать имя класса dp */ }
                     <img src={ props.profile.photos.small ? props.profile.photos.small : avatar } alt="Avatar"
                          className={ styles.img } />
+                    { props.isOwner && <Upload className="dp" savePhoto={ props.savePhoto } /> } {/* TODO: тут разобраться как передать имя класса dp */ }
                 </div>
                 <div className={ styles.title }>
                     <a href="#" className={ styles.name }>{ props.profile.fullName }</a>

@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ffdf472d-3220-4381-bfd5-758f3e73821b" name="Default Changelist" comment="added test for ProfileStatus.jsx">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/package.json" afterDir="false" />
+    <list default="true" id="ffdf472d-3220-4381-bfd5-758f3e73821b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/my-app/src/API/API.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/API/API.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/Author/Author.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Author/Author.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/ProfileCover/ProfileCover.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/ProfileCover/ProfileCover.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/ProfileWrapper/ProfileWrapper.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/ProfileWrapper/ProfileWrapper.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/ProfileWrapper/ProfileWrapperContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/ProfileWrapper/ProfileWrapperContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/Upload/Upload.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Upload/Upload.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/Upload/upload.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Upload/upload.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/redux/profile-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/profile-reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/redux/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/types.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/redux/users-reducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/users-reducers.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -265,7 +272,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614176185652</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="added gh pages">
+      <created>1614260669804</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1614260669804</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -297,6 +311,7 @@
     <MESSAGE value="some refactor" />
     <MESSAGE value="added redux extension. fixed profile status" />
     <MESSAGE value="added test for ProfileStatus.jsx" />
-    <option name="LAST_COMMIT_MESSAGE" value="added test for ProfileStatus.jsx" />
+    <MESSAGE value="added gh pages" />
+    <option name="LAST_COMMIT_MESSAGE" value="added gh pages" />
   </component>
 </project>
