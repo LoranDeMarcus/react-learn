@@ -11,7 +11,7 @@ const Upload = ({ className, savePhoto }) => {
     }
 
     return (
-        <div className={ 'dp' }>
+        <div className={ styles[className] }>
             <label className={ styles.edit }>
                 <i className="fas fa-camera" />
                 <input type="file" className={ styles.action } onChange={photoSelected} />
