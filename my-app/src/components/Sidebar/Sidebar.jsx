@@ -1,11 +1,19 @@
-import React from 'react';
-import Info from './Info/Info';
+import React, { useState } from 'react';
+import ProfileInfo from '../ProfileInfo/ProfileInfo';
 import Block from '../common/Block/Block';
+import ProfileStatusWithHooks from '../ProfileStatus/ProfileStatusWithHooks';
+import ProfileInfoDataFormRedux from '../ProfileInfo/ProfileInfoDataForm';
 
 import styles from './Sidebar.module.css';
-import ProfileStatusWithHooks from '../ProfileStatus/ProfileStatusWithHooks';
 
-const Sidebar = ({status, updateUserStatus, profile }) => {
+const Sidebar = ({ status, updateUserStatus, profile, isOwner, saveProfile }) => {
+
+    const [editMode, setEditMode] = useState(false);
+
+    const onSubmit = (formData) => {
+        saveProfile(formData);
+    }
+
     return (
         <aside className={ styles.block }>
             <Block title='Status'>
@@ -15,7 +23,9 @@ const Sidebar = ({status, updateUserStatus, profile }) => {
                 />
             </Block>
             <Block title='Personal Info'>
-                <Info profile={ profile } />
+                { editMode
+                    ? <ProfileInfoDataFormRedux onSubmit={onSubmit} profile={ profile } isOwner={ isOwner } />
+                    : <ProfileInfo profile={ profile } isOwner={ isOwner } toggleEditMode={ () => setEditMode(true) } /> }
             </Block>
         </aside>
     );

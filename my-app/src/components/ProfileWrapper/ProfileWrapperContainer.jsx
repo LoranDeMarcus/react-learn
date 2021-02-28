@@ -1,7 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import ProfileWrapper from './ProfileWrapper';
-import { setUserProfile, getUsersProfile, getUserStatus, updateUserStatus, savePhoto } from '../../redux/profile-reducer';
+import {
+    getUsersProfile,
+    getUserStatus,
+    savePhoto, saveProfile,
+    setUserProfile,
+    updateUserStatus
+} from '../../redux/profile-reducer';
 import { withRouter } from 'react-router';
 import { compose } from 'redux';
 import { withAuthRedirect } from '../../HOC/withAuthRedirect';
@@ -39,6 +45,7 @@ class ProfileWrapperContainer extends React.Component {
                 status={ this.props.status }
                 updateUserStatus={ this.props.updateUserStatus }
                 savePhoto={ this.props.savePhoto }
+                saveProfile={ this.props.saveProfile }
             />
         );
     }
@@ -57,7 +64,8 @@ export default compose(
         setUserProfile,
         getUsersProfile,
         getUserStatus,
-        updateUserStatus, savePhoto
+        updateUserStatus, savePhoto,
+        saveProfile
     }),
     withRouter,
     withAuthRedirect

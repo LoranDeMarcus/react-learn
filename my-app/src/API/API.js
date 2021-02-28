@@ -43,6 +43,9 @@ export const profileAPI = {
         return axiosInstance.put('profile/photo', formData, {
             'Content-Type': 'multipart/form-data'
         });
+    },
+    saveProfile(profile) {
+        return axiosInstance.put('profile', profile);
     }
 }
 

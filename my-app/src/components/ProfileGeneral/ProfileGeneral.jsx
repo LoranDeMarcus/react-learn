@@ -8,7 +8,7 @@ import PostsContainer from '../Posts/PostsContainer';
 const ProfileGeneral = (props) => {
     return (
         <div className={ styles.block }>
-            <Block title='General Info'>
+            <Block title='General ProfileInfo'>
                 <div className={ styles.flex }>
                     <MetaInfo
                         icon={ <i className="fas fa-puzzle-piece" /> }

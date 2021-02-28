@@ -1,0 +1,67 @@
+.info {
+
+}
+
+.title {
+    color: #515365;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    width: 100%;
+    text-transform: capitalize;
+}
+
+.title i {
+    color: #fa6342;
+    margin-right: 9px;
+}
+
+.main {
+    font-size: 13px;
+    line-height: 20px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    letter-spacing: 0.1px;
+    color: #959ab5;
+}
+
+.edit {
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    color: #fa6342;
+    transition: all 0.3s;
+    position: absolute;
+    right: 20px;
+    top: 70px;
+}
+
+.edit:hover {
+    opacity: 0.7;
+}
+
+.text {
+    margin-left: 10px;
+    vertical-align: text-bottom;
+}
+
+.input {
+    display: block;
+    width: 100%;
+    border: 1px solid #ede9e9;
+    border-radius: 6px;
+    padding: 0 10px;
+}
+
+.textarea {
+    padding: 0 10px;
+    display: block;
+    border: 1px solid #ede9e9;
+    width: 100%;
+    resize: vertical;
+    border-radius: 6px;
+}

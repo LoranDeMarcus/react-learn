@@ -8,9 +8,11 @@ const ProfileContent = (props) => {
     return (
         <div className={ styles.main }>
             <Sidebar
+                isOwner={props.isOwner}
                 profile={ props.profile }
                 status={ props.status }
                 updateUserStatus={ props.updateUserStatus }
+                saveProfile={props.saveProfile}
             />
             <ProfileGeneral profile={ props.profile } />
         </div>

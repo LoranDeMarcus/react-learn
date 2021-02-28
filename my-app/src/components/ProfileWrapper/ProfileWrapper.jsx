@@ -12,9 +12,11 @@ const ProfileWrapper = (props) => {
         <>
             <ProfileCover isOwner={props.isOwner} profile={ props.profile } savePhoto={props.savePhoto} />
             <ProfileContent
+                isOwner={props.isOwner}
                 profile={ props.profile }
                 status={ props.status }
                 updateUserStatus={props.updateUserStatus}
+                saveProfile={props.saveProfile}
             />
         </>
     );

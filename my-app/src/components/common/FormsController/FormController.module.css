@@ -1,6 +1,5 @@
 .formsController {
-    width: 90%;
-    margin-right: 15px;
+    width: 100%;
 }
 .formsController.error input,
 .formsController.error textarea {

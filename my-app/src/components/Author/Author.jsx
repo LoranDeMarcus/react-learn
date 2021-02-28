@@ -15,7 +15,7 @@ const Author = (props) => {
                          className={ styles.img } />
                 </div>
                 <div className={ styles.title }>
-                    <a href="#" className={ styles.name }>{ props.profile.fullName }</a>
+                    <span href="#" className={ styles.name }>{ props.profile.fullName }</span>
                     <div className={ styles.country }>
                         Ontario, CA
                     </div>
