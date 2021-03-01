@@ -1,5 +1,7 @@
 import React from 'react';
 
+import styles from './ProfileStatus.module.css';
+
 class ProfileStatus extends React.Component {
     state = {
         editMode: false,
@@ -11,12 +13,12 @@ class ProfileStatus extends React.Component {
             editMode: !this.state.editMode
         });
         this.props.updateUserStatus(this.state.status);
-    }
+    };
     onStatusChange = (e) => {
         this.setState({
             status: e.currentTarget.value
         });
-    }
+    };
 
     componentDidUpdate(prevProps, prevState, snapshot) {
         if (prevProps.status !== this.props.status) {
@@ -30,22 +32,16 @@ class ProfileStatus extends React.Component {
         return (
             <>
                 { !this.state.editMode ?
-                    <div>
-                        <span onClick={ () => {
-                            this.toggleEditMode();
-                        }
-                        }>{ this.props.status }</span>
-                    </div>
+                    <span className={ styles.statusText } onClick={ () => this.toggleEditMode() }>
+                        { this.props.status }
+                    </span>
                     :
-                    <div>
-                        <input
-                            onChange={this.onStatusChange}
-                            autoFocus={true}
-                            onBlur={() => {
-                            this.toggleEditMode();
-                        }
-                        } value={ this.state.status } />
-                    </div>
+                    <input
+                        className={ styles.input }
+                        onChange={ this.onStatusChange }
+                        autoFocus={ true }
+                        onBlur={ () => this.toggleEditMode() }
+                        value={ this.state.status } />
                 }
             </>
         );
