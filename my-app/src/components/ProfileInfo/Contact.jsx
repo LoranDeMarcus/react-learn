@@ -9,9 +9,9 @@ const Contact = ({ contactTitle, contactValue }) => {
                 <i className="fas fa-link" />
                 { contactTitle }
             </span>
-            <p>
+            <div className={ styles.main }>
                 { contactValue }
-            </p>
+            </div>
         </div>
     );
 };

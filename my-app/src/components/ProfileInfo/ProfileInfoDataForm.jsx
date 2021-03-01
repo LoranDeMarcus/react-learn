@@ -1,14 +1,15 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
-import Contact from './Contact';
+import ContactDataForm from './ContactDataForm';
 import { Element } from '../common/FormsController/FormController';
 
 import styles from './ProfileInfo.module.css';
+import style from '../common/FormsController/FormController.module.css';
 
 const Input = Element('input');
 const Textarea = Element('textarea');
 
-const ProfileInfoDataForm = ({ handleSubmit, profile, isOwner, toggleEditMode }) => {
+const ProfileInfoDataForm = ({ handleSubmit, profile, isOwner, toggleEditMode, error }) => {
     return (
         <form onSubmit={ handleSubmit }>
             { isOwner &&
@@ -16,6 +17,7 @@ const ProfileInfoDataForm = ({ handleSubmit, profile, isOwner, toggleEditMode })
                 <i className="fas fa-save" />
             </button>
             }
+            { error ? <div className={ style.formSummaryError }>{ error }</div> : '' }
             <div>
                 <span className={ styles.title }>
                     <i className="fa fa-briefcase" />
@@ -25,7 +27,7 @@ const ProfileInfoDataForm = ({ handleSubmit, profile, isOwner, toggleEditMode })
                     <Field
                         component={ Input }
                         type={ 'text' }
-                        name={ 'FullName' }
+                        name={ 'fullName' }
                         placeholder={ 'Full name' }
                         className={ styles.input }
                     />
@@ -55,7 +57,7 @@ const ProfileInfoDataForm = ({ handleSubmit, profile, isOwner, toggleEditMode })
                     <Field
                         component={ Textarea }
                         type={ 'textarea' }
-                        name={ 'LookingForAJobDescription' }
+                        name={ 'lookingForAJobDescription' }
                         placeholder={ 'My professional skills' }
                         className={ styles.textarea }
                     />
@@ -70,7 +72,7 @@ const ProfileInfoDataForm = ({ handleSubmit, profile, isOwner, toggleEditMode })
                     <Field
                         component={ Input }
                         type={ 'text' }
-                        name={ 'AboutMe' }
+                        name={ 'aboutMe' }
                         placeholder={ 'About me' }
                         className={ styles.input }
                     />
@@ -82,7 +84,7 @@ const ProfileInfoDataForm = ({ handleSubmit, profile, isOwner, toggleEditMode })
                 </span>
                 <div>
                     { Object.keys(profile.contacts).map(key => {
-                        return <Contact key={ key } contactTitle={ key } contactValue={ profile.contacts[key] } />;
+                        return <ContactDataForm key={ key } contacts={ 'contacts.' + key } contactTitle={ key } />;
                     }) }
                 </div>
             </div>

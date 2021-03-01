@@ -11,7 +11,10 @@ const Sidebar = ({ status, updateUserStatus, profile, isOwner, saveProfile }) =>
     const [editMode, setEditMode] = useState(false);
 
     const onSubmit = (formData) => {
-        saveProfile(formData);
+        saveProfile(formData).then(() => {
+            setEditMode(false);
+        });
+        /* TODO: https://www.youtube.com/watch?v=-tDhjScH_0s&list=PLcvhF2Wqh7DNVy1OCUpG3i5lyxyBWhGZ8&index=98 1:20:00 переделать редакс сабмит формы */
     }
 
     return (
@@ -24,8 +27,18 @@ const Sidebar = ({ status, updateUserStatus, profile, isOwner, saveProfile }) =>
             </Block>
             <Block title='Personal Info'>
                 { editMode
-                    ? <ProfileInfoDataFormRedux onSubmit={onSubmit} profile={ profile } isOwner={ isOwner } />
-                    : <ProfileInfo profile={ profile } isOwner={ isOwner } toggleEditMode={ () => setEditMode(true) } /> }
+                    ? <ProfileInfoDataFormRedux
+                        onSubmit={ onSubmit }
+                        initialValues={ profile }
+                        profile={ profile }
+                        isOwner={ isOwner }
+                    />
+                    : <ProfileInfo
+                        profile={ profile }
+                        isOwner={ isOwner }
+                        toggleEditMode={ () => setEditMode(true) }
+                    />
+                }
             </Block>
         </aside>
     );

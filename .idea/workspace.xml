@@ -5,12 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ffdf472d-3220-4381-bfd5-758f3e73821b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/my-app/src/components/ProfileInfo/ContactDataForm.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Author/Author.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Author/Author.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Author/Author.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Author/Author.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Header/avatar.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/assets/images/avatar.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Upload/Upload.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Upload/Upload.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Upload/upload.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Upload/upload.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/ProfileInfo/Contact.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/ProfileInfo/Contact.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/ProfileInfo/ProfileInfo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/ProfileInfo/ProfileInfo.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/ProfileInfo/ProfileInfoDataForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/ProfileInfo/ProfileInfoDataForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/Sidebar/Sidebar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Sidebar/Sidebar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/redux/profile-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/profile-reducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +42,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/my-app/src/assets/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../job-search-2" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -164,6 +165,7 @@
       <workItem from="1613906280297" duration="5042000" />
       <workItem from="1613980368529" duration="9598000" />
       <workItem from="1614085155592" duration="10724000" />
+      <workItem from="1614603701505" duration="4327000" />
     </task>
     <task id="LOCAL-00001" summary="added axios and updated next lesson link">
       <created>1612717712644</created>
@@ -277,7 +279,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614094610287</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="fix">
+      <created>1614576103983</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1614576103983</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -303,7 +312,6 @@
     <MESSAGE value="refactored all requests" />
     <MESSAGE value="finished componentDidUpdate" />
     <MESSAGE value="update next lesson link" />
-    <MESSAGE value="fix" />
     <MESSAGE value="added useState hook" />
     <MESSAGE value="added useEffect, updated next lesson link" />
     <MESSAGE value="added key on iterable components" />
@@ -311,6 +319,7 @@
     <MESSAGE value="updated lesson link" />
     <MESSAGE value="added tests for profile reducer" />
     <MESSAGE value="refactored reducers: async await" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactored reducers: async await" />
+    <MESSAGE value="fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix" />
   </component>
 </project>

@@ -13,15 +13,6 @@ const ProfileInfo = ({ profile, isOwner, toggleEditMode }) => {
             }
             <div>
                 <span className={ styles.title }>
-                    <i className="fa fa-user" />
-                    About Me:
-                </span>
-                <p className={ styles.main }>
-                    { profile.aboutMe ? profile.aboutMe : 'empty' }
-                </p>
-            </div>
-            <div>
-                <span className={ styles.title }>
                     <i className="fa fa-briefcase" />
                     Looking for job?:
                 </span>
@@ -40,6 +31,15 @@ const ProfileInfo = ({ profile, isOwner, toggleEditMode }) => {
                 </p>
             </div>
             }
+            <div>
+                <span className={ styles.title }>
+                    <i className="fa fa-user" />
+                    About Me:
+                </span>
+                <p className={ styles.main }>
+                    { profile.aboutMe ? profile.aboutMe : 'empty' }
+                </p>
+            </div>
             <div>
                 <span className={ styles.title }>
                     Contacts:
