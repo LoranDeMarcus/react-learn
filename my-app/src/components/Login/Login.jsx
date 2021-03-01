@@ -11,7 +11,7 @@ import style from '../common/FormsController/FormController.module.css';
 
 const Input = Element('input');
 
-const LoginForm = ({handleSubmit, error}) => {
+const LoginForm = ({ handleSubmit, error, captchaUrl }) => {
     return (
         <div className={ styles.wrapper }>
             <h2 className={ styles.title }>
@@ -49,7 +49,19 @@ const LoginForm = ({handleSubmit, error}) => {
                         /> &nbsp;remember me
                     </label>
                 </div>
-                { /* TODO: добавить капчу*/ }
+                { captchaUrl &&
+                    <>
+                        <img src={ captchaUrl } alt={ 'captchaUrl' } />
+                        <Field
+                            component={ Input }
+                            validate={ [requiredField] }
+                            type={ 'text' }
+                            name={ 'captcha' } /* todo: не выводится капча*/
+                            placeholder={ 'Symbols from image' }
+                            className={ styles.input }
+                        />
+                    </>
+                }
                 { error ? <div className={ style.formSummaryError }>{ error }</div> : '' }
                 <div>
                     { /*TODO: при сабмите редиректить на странцу профиля*/ }
@@ -77,11 +89,12 @@ const Login = (props) => {
     }
 
     return (
-        <LoginFormRedux onSubmit={ onSubmit } />
+        <LoginFormRedux onSubmit={ onSubmit } captcha={ props.captchaUrl } />
     );
 };
 
 const mapStateToProps = (state) => ({
+    captchaUrl: state.auth.captchaUrl,
     isAuth: state.auth.isAuth
 });
 

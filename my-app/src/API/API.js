@@ -60,3 +60,9 @@ export const authAPI = {
         return axiosInstance.delete('auth/login').then(response => response.data);
     }
 }
+
+export const securityAPI = {
+    getCaptchaUrl() {
+        return axiosInstance.get('security/get-captcha-url');
+    }
+}

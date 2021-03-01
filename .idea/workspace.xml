@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ffdf472d-3220-4381-bfd5-758f3e73821b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/my-app/src/components/ProfileInfo/ContactDataForm.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/ProfileInfo/Contact.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/ProfileInfo/Contact.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/ProfileInfo/ProfileInfo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/ProfileInfo/ProfileInfo.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/ProfileInfo/ProfileInfoDataForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/ProfileInfo/ProfileInfoDataForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Sidebar/Sidebar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Sidebar/Sidebar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/redux/profile-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/profile-reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/API/API.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/API/API.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/Login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Login/Login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/redux/auth-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/auth-reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/redux/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/types.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +164,7 @@
       <workItem from="1613906280297" duration="5042000" />
       <workItem from="1613980368529" duration="9598000" />
       <workItem from="1614085155592" duration="10724000" />
-      <workItem from="1614603701505" duration="4327000" />
+      <workItem from="1614603701505" duration="5912000" />
     </task>
     <task id="LOCAL-00001" summary="added axios and updated next lesson link">
       <created>1612717712644</created>
@@ -286,7 +285,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614576103983</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="added profile contacts edit form">
+      <created>1614608688751</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1614608688751</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -320,6 +326,7 @@
     <MESSAGE value="added tests for profile reducer" />
     <MESSAGE value="refactored reducers: async await" />
     <MESSAGE value="fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix" />
+    <MESSAGE value="added profile contacts edit form" />
+    <option name="LAST_COMMIT_MESSAGE" value="added profile contacts edit form" />
   </component>
 </project>
