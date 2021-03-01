@@ -10,7 +10,6 @@
       <change beforePath="$PROJECT_DIR$/my-app/src/components/Login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Login/Login.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/redux/auth-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/auth-reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/redux/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/types.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +40,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../job-search-2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/my-app/src/assets/images" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -62,6 +61,7 @@
       <recent name="E:\Projects\react-js\my-app\src\components\Users" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Projects\react-js\my-app\src\components" />
       <recent name="E:\Projects\react-js\my-app\src\assets\images" />
       <recent name="E:\Projects\react-js\my-app\src\components\common" />
       <recent name="E:\Projects\react-js\my-app\src\components\common\Paginator" />
@@ -164,7 +164,8 @@
       <workItem from="1613906280297" duration="5042000" />
       <workItem from="1613980368529" duration="9598000" />
       <workItem from="1614085155592" duration="10724000" />
-      <workItem from="1614603701505" duration="5912000" />
+      <workItem from="1614415844969" duration="595000" />
+      <workItem from="1614498679227" duration="15417000" />
     </task>
     <task id="LOCAL-00001" summary="added axios and updated next lesson link">
       <created>1612717712644</created>
@@ -278,21 +279,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614094610287</updated>
     </task>
-    <task id="LOCAL-00017" summary="fix">
-      <created>1614576103983</created>
+    <task id="LOCAL-00017" summary="updated lesson link">
+      <created>1614273867061</created>
       <option name="number" value="00017" />
       <option name="presentableId" value="LOCAL-00017" />
       <option name="project" value="LOCAL" />
-      <updated>1614576103983</updated>
+      <updated>1614273867061</updated>
     </task>
-    <task id="LOCAL-00018" summary="added profile contacts edit form">
-      <created>1614608688751</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1614608688751</updated>
-    </task>
-    <option name="localTasksCounter" value="19" />
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -318,15 +312,14 @@
     <MESSAGE value="refactored all requests" />
     <MESSAGE value="finished componentDidUpdate" />
     <MESSAGE value="update next lesson link" />
+    <MESSAGE value="fix" />
     <MESSAGE value="added useState hook" />
     <MESSAGE value="added useEffect, updated next lesson link" />
     <MESSAGE value="added key on iterable components" />
     <MESSAGE value="added keys on iterable components" />
-    <MESSAGE value="updated lesson link" />
     <MESSAGE value="added tests for profile reducer" />
     <MESSAGE value="refactored reducers: async await" />
-    <MESSAGE value="fix" />
-    <MESSAGE value="added profile contacts edit form" />
-    <option name="LAST_COMMIT_MESSAGE" value="added profile contacts edit form" />
+    <MESSAGE value="updated lesson link" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated lesson link" />
   </component>
 </project>

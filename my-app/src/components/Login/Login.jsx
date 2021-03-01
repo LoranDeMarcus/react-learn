@@ -50,17 +50,17 @@ const LoginForm = ({ handleSubmit, error, captchaUrl }) => {
                     </label>
                 </div>
                 { captchaUrl &&
-                    <>
-                        <img src={ captchaUrl } alt={ 'captchaUrl' } />
-                        <Field
-                            component={ Input }
-                            validate={ [requiredField] }
-                            type={ 'text' }
-                            name={ 'captcha' } /* todo: не выводится капча*/
-                            placeholder={ 'Symbols from image' }
-                            className={ styles.input }
-                        />
-                    </>
+                <>
+                    <img src={ captchaUrl } alt={ 'captchaUrl' } />
+                    <Field
+                        component={ Input }
+                        validate={ [requiredField] }
+                        type={ 'text' }
+                        name={ 'captcha' }
+                        placeholder={ 'Symbols from image' }
+                        className={ styles.input }
+                    />
+                </>
                 }
                 { error ? <div className={ style.formSummaryError }>{ error }</div> : '' }
                 <div>
@@ -81,7 +81,7 @@ const LoginFormRedux = reduxForm({ form: 'login' })(LoginForm);
 
 const Login = (props) => {
     const onSubmit = (formData) => {
-        props.login(formData.email, formData.password, formData.rememberMe);
+        props.login(formData.email, formData.password, formData.rememberMe, formData.captcha);
     };
 
     if (props.isAuth) {
@@ -89,7 +89,7 @@ const Login = (props) => {
     }
 
     return (
-        <LoginFormRedux onSubmit={ onSubmit } captcha={ props.captchaUrl } />
+        <LoginFormRedux onSubmit={ onSubmit } captchaUrl={ props.captchaUrl } />
     );
 };
 

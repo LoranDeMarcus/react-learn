@@ -49,8 +49,9 @@ export const authMe = () => async (dispatch) => {
     }
 };
 
-export const login = (email, password, rememberMe) => async (dispatch) => {
-    const response = await authAPI.loginRequest(email, password, rememberMe);
+export const login = (email, password, rememberMe, captcha) => async (dispatch) => {
+    const response = await authAPI.loginRequest(email, password, rememberMe, captcha);
+    console.log(response);
     if (response.resultCode === 0) {
         dispatch(setAuthUserData());
     } else {
@@ -65,7 +66,6 @@ export const login = (email, password, rememberMe) => async (dispatch) => {
 export const getCaptchaUrl = () => async (dispatch) => {
     const response = await securityAPI.getCaptchaUrl();
     const captchaUrl = response.data.url;
-
     dispatch(getCaptchaUrlSuccess(captchaUrl));
 };
 
