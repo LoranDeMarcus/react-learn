@@ -6,7 +6,7 @@ const ProfileMain = (props) => {
     return (
         <main>
             <Container>
-                <ProfileWrapperContainer store={ props.store } />
+                <ProfileWrapperContainer />
             </Container>
         </main>
     );

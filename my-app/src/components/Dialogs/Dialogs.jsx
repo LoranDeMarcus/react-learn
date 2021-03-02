@@ -32,5 +32,6 @@ const Dialogs = (props) => {
         </div>
     );
 };
+// todo: добавить connect
 
 export default Dialogs;

@@ -1,23 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import SocialNetwork from './App';
 import reportWebVitals from './reportWebVitals';
-import store from './redux/redux-store';
-import { Provider } from 'react-redux';
 
 import './index.css';
-import { HashRouter } from 'react-router-dom';
 
-ReactDOM.render(
-    <React.StrictMode>
-        <Provider store={ store }>
-            <HashRouter>
-            <App />
-            </HashRouter>
-        </Provider>
-    </React.StrictMode>,
-    document.getElementById('root')
-);
+ReactDOM.render(<SocialNetwork />, document.getElementById('root'));
 
 
 // If you want to start measuring performance in your app, pass a function
@@ -25,4 +13,4 @@ ReactDOM.render(
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
 
-// next lesson: https://www.youtube.com/watch?v=BhwoKN1E3C8&list=PLcvhF2Wqh7DNVy1OCUpG3i5lyxyBWhGZ8&index=100
+// next lesson: https://www.youtube.com/watch?v=doVgFdc6Op4&list=PLcvhF2Wqh7DM3z1XqMw0kPuxpbyMo3HvN&index=3
