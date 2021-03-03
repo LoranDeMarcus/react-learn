@@ -1,36 +1,7 @@
-import {ADD_POST, DELETE_POST, SAVE_PHOTO_SUCCESS, SET_USER_PROFILE, SET_USER_STATUS} from './types';
-import {profileAPI} from '../API/API';
-import {stopSubmit} from 'redux-form';
-
-type PostsType = {
-    id: number,
-    message: string
-}
-
-type ProfileType = {
-    userId: number,
-    lookingForAJob: boolean,
-    lookingForAJobDescription: string,
-    fullName: string,
-    contacts: ContactsType,
-    photos: PhotosType
-}
-
-type ContactsType = {
-    github: string,
-    vk: string,
-    facebook: string,
-    instagram: string,
-    twitter: string,
-    website: string,
-    youtube: string,
-    mainLink: string
-}
-
-type PhotosType = {
-    small: string | null,
-    large: string | null
-}
+import { ADD_POST, DELETE_POST, SAVE_PHOTO_SUCCESS, SET_USER_PROFILE, SET_USER_STATUS } from './types';
+import { profileAPI } from '../API/API';
+import { stopSubmit } from 'redux-form';
+import { PhotosType, PostsType, ProfileType } from "../Types/types";
 
 const initialState = {
     posts: [
@@ -56,7 +27,8 @@ const initialState = {
         }
     ] as Array<PostsType>,
     profile: null as ProfileType | null,
-    status: ''
+    status: '',
+    newPostText: ''
 };
 
 export type InitialStateType = typeof initialState;
@@ -94,7 +66,7 @@ export const profileReducer = (state = initialState, action: any): InitialStateT
         case SAVE_PHOTO_SUCCESS: {
             return {
                 ...state,
-                profile: {...state.profile, photos: action.photos}
+                profile: { ...state.profile, photos: action.photos } as ProfileType
             };
         }
         default:
@@ -102,35 +74,60 @@ export const profileReducer = (state = initialState, action: any): InitialStateT
     }
 };
 
-export const addPostCreator = (newPostText: string) => {
+type AddPostCreatorActionType = {
+    type: typeof ADD_POST,
+    newPostText: string
+}
+
+export const addPostCreator = (newPostText: string): AddPostCreatorActionType => {
     return {
         type: ADD_POST,
         newPostText
     };
 };
 
-export const setUserProfile = (profile) => {
+type SetUserProfileActionType = {
+    type: typeof SET_USER_PROFILE,
+    profile: ProfileType
+}
+
+export const setUserProfile = (profile: ProfileType): SetUserProfileActionType => {
     return {
         type: SET_USER_PROFILE,
         profile
     };
 };
 
-export const setUserStatus = (status) => {
+type SetUserStatusActionType = {
+    type: typeof SET_USER_STATUS,
+    status: string
+}
+
+export const setUserStatus = (status: string): SetUserStatusActionType => {
     return {
         type: SET_USER_STATUS,
         status
     };
 };
 
-export const deletePost = (postId: number) => {
+type DeletePostActionType = {
+    type: typeof DELETE_POST,
+    postId: number
+}
+
+export const deletePost = (postId: number): DeletePostActionType => {
     return {
         type: DELETE_POST,
         postId
     };
 };
 
-export const savePhotoSuccess = (photos) => {
+type SavePhotoSuccessActionType = {
+    type: typeof SAVE_PHOTO_SUCCESS,
+    photos: PhotosType
+}
+
+export const savePhotoSuccess = (photos: PhotosType): SavePhotoSuccessActionType => {
     return {
         type: SAVE_PHOTO_SUCCESS,
         photos
@@ -158,21 +155,21 @@ export const updateUserStatus = (status: string) => async (dispatch: any) => {
     }
 };
 
-export const savePhoto = (file) => async (dispatch: any) => {
+export const savePhoto = (file: any) => async (dispatch: any) => {
     const response = await profileAPI.savePhoto(file);
     if (response.data.resultCode === 0) {
         dispatch(savePhotoSuccess(response.data.data.photos));
     }
 };
 
-export const saveProfile = (profile) => async (dispatch: any, getState) => {
+export const saveProfile = (profile: ProfileType) => async (dispatch: any, getState: any) => {
     const userId = getState().auth.id;
     const response = await profileAPI.saveProfile(profile);
     if (response.data.resultCode === 0) {
         dispatch(getUsersProfile(userId));
     } else {
         const message = response.data.messages.length > 0 ? response.data.messages[0] : 'Some error';
-        dispatch(stopSubmit('edit-profile', {_error: message}));
+        dispatch(stopSubmit('edit-profile', { _error: message }));
         return Promise.reject(message);
     }
 };
