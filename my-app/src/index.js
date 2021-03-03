@@ -5,7 +5,11 @@ import reportWebVitals from './reportWebVitals';
 
 import './index.css';
 
-ReactDOM.render(<SocialNetwork />, document.getElementById('root'));
+ReactDOM.render(
+    <React.StrictMode>
+        <SocialNetwork />
+    </React.StrictMode>,
+    document.getElementById('root'));
 
 
 // If you want to start measuring performance in your app, pass a function
@@ -13,4 +17,4 @@ ReactDOM.render(<SocialNetwork />, document.getElementById('root'));
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
 
-// next lesson: https://www.youtube.com/watch?v=doVgFdc6Op4&list=PLcvhF2Wqh7DM3z1XqMw0kPuxpbyMo3HvN&index=3
+// next lesson: https://www.youtube.com/watch?v=7s8RJw6uWsQ&list=PLcvhF2Wqh7DM3z1XqMw0kPuxpbyMo3HvN&index=4 : 52:25

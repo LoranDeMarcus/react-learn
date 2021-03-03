@@ -1,6 +1,36 @@
-import { ADD_POST, DELETE_POST, SAVE_PHOTO_SUCCESS, SET_USER_PROFILE, SET_USER_STATUS } from './types';
-import { profileAPI } from '../API/API';
-import { stopSubmit } from 'redux-form';
+import {ADD_POST, DELETE_POST, SAVE_PHOTO_SUCCESS, SET_USER_PROFILE, SET_USER_STATUS} from './types';
+import {profileAPI} from '../API/API';
+import {stopSubmit} from 'redux-form';
+
+type PostsType = {
+    id: number,
+    message: string
+}
+
+type ProfileType = {
+    userId: number,
+    lookingForAJob: boolean,
+    lookingForAJobDescription: string,
+    fullName: string,
+    contacts: ContactsType,
+    photos: PhotosType
+}
+
+type ContactsType = {
+    github: string,
+    vk: string,
+    facebook: string,
+    instagram: string,
+    twitter: string,
+    website: string,
+    youtube: string,
+    mainLink: string
+}
+
+type PhotosType = {
+    small: string | null,
+    large: string | null
+}
 
 const initialState = {
     posts: [
@@ -24,12 +54,14 @@ const initialState = {
             id: 5,
             message: '+rep'
         }
-    ],
-    profile: null,
+    ] as Array<PostsType>,
+    profile: null as ProfileType | null,
     status: ''
 };
 
-export const profileReducer = (state = initialState, action) => {
+export type InitialStateType = typeof initialState;
+
+export const profileReducer = (state = initialState, action: any): InitialStateType => {
     switch (action.type) {
         case ADD_POST: {
             return {
@@ -62,7 +94,7 @@ export const profileReducer = (state = initialState, action) => {
         case SAVE_PHOTO_SUCCESS: {
             return {
                 ...state,
-                profile: { ...state.profile, photos: action.photos }
+                profile: {...state.profile, photos: action.photos}
             };
         }
         default:
@@ -70,7 +102,7 @@ export const profileReducer = (state = initialState, action) => {
     }
 };
 
-export const addPostCreator = (newPostText) => {
+export const addPostCreator = (newPostText: string) => {
     return {
         type: ADD_POST,
         newPostText
@@ -91,7 +123,7 @@ export const setUserStatus = (status) => {
     };
 };
 
-export const deletePost = (postId) => {
+export const deletePost = (postId: number) => {
     return {
         type: DELETE_POST,
         postId
@@ -105,12 +137,12 @@ export const savePhotoSuccess = (photos) => {
     };
 };
 
-export const getUsersProfile = (userId) => async (dispatch) => {
+export const getUsersProfile = (userId: number) => async (dispatch: any) => {
     const response = await profileAPI.getUsersProfile(userId);
     dispatch(setUserProfile(response));
 };
 
-export const getUserStatus = (userId) => async (dispatch) => {
+export const getUserStatus = (userId: number) => async (dispatch: any) => {
     let response = await profileAPI.getUserStatus(userId);
     if (!response) {
         response = 'Change status';
@@ -119,28 +151,28 @@ export const getUserStatus = (userId) => async (dispatch) => {
     dispatch(setUserStatus(response));
 };
 
-export const updateUserStatus = (status) => async (dispatch) => {
+export const updateUserStatus = (status: string) => async (dispatch: any) => {
     const response = await profileAPI.updateUserStatus(status);
     if (response.data.resultCode === 0) {
         dispatch(setUserStatus(status));
     }
 };
 
-export const savePhoto = (file) => async (dispatch) => {
+export const savePhoto = (file) => async (dispatch: any) => {
     const response = await profileAPI.savePhoto(file);
     if (response.data.resultCode === 0) {
         dispatch(savePhotoSuccess(response.data.data.photos));
     }
 };
 
-export const saveProfile = (profile) => async (dispatch, getState) => {
+export const saveProfile = (profile) => async (dispatch: any, getState) => {
     const userId = getState().auth.id;
     const response = await profileAPI.saveProfile(profile);
     if (response.data.resultCode === 0) {
         dispatch(getUsersProfile(userId));
     } else {
         const message = response.data.messages.length > 0 ? response.data.messages[0] : 'Some error';
-        dispatch(stopSubmit('edit-profile', { _error: message }));
+        dispatch(stopSubmit('edit-profile', {_error: message}));
         return Promise.reject(message);
     }
 };

@@ -6,6 +6,20 @@ import user3 from '../components/avatars/chatuser3.jpg';
 import user4 from '../components/avatars/chatuser4.jpg';
 import user5 from '../components/avatars/chatuser51.jpg';
 
+type DialogType = {
+    id: number,
+    avatar: string,
+    name: string
+    secondName: string
+    lastMessage: string
+}
+
+type MessagesType = {
+    id: number,
+    message: string
+    time: string
+}
+
 const initialState = {
     dialogs: [
         {
@@ -13,7 +27,6 @@ const initialState = {
             avatar: user1,
             name: 'Andrew',
             secondName: 'Martin',
-            online: true,
             lastMessage: 'you send a video - 2hrs ago'
         },
         {
@@ -44,7 +57,7 @@ const initialState = {
             secondName: 'Bozeman',
             lastMessage: 'something there'
         }
-    ],
+    ] as Array<DialogType>,
     messages: [
         {
             id: 1,
@@ -72,13 +85,15 @@ const initialState = {
             message: 'Dear You May again download the package directly',
             time: '23:50'
         }
-    ]
+    ] as Array<MessagesType>
 };
 
-export const messagesReducer = (state = initialState, action) => {
+export type InitialStateType = typeof initialState;
+
+export const messagesReducer = (state = initialState, action: any): InitialStateType => {
     switch (action.type) {
         case SEND_MESSAGE: {
-            return {
+            return <InitialStateType>{
                 ...state,
                 messages: [...state.messages, {
                     id: 6,
@@ -91,7 +106,12 @@ export const messagesReducer = (state = initialState, action) => {
     }
 };
 
-export const sendMessageCreator = (newMessageBody) => {
+type SendMessageCreatorActionType = {
+    type: typeof SEND_MESSAGE,
+    newMessageBody: string
+}
+
+export const sendMessageCreator = (newMessageBody: string): SendMessageCreatorActionType => {
     return {
         type: SEND_MESSAGE,
         newMessageBody

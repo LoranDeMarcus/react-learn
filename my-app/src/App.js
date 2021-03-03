@@ -83,13 +83,11 @@ const AppContainer = compose(withRouter, connect(mapStateToProps, { initializeAp
 
 const SocialNetwork = () => {
     return (
-        <React.StrictMode>
-            <BrowserRouter>
-                <Provider store={ store }>
-                    <AppContainer />
-                </Provider>
-            </BrowserRouter>
-        </React.StrictMode>
+        <BrowserRouter>
+            <Provider store={ store }>
+                <AppContainer />
+            </Provider>
+        </BrowserRouter>
     );
 };
 

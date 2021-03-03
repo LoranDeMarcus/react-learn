@@ -5,11 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ffdf472d-3220-4381-bfd5-758f3e73821b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/my-app/src/react-app-env.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-app/tsconfig.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Dialogs/Dialogs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Dialogs/Dialogs.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/ProfileMain/ProfileMain.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/ProfileMain/ProfileMain.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/redux/app-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/app-reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/redux/auth-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/auth-reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/redux/messages-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/messages-reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/redux/profile-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/profile-reducer.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +46,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../satellite" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -50,7 +56,7 @@
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/my-app/node_modules/react-scripts" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
-    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2020.1.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/my-app/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -164,6 +170,8 @@
       <workItem from="1613980368529" duration="9598000" />
       <workItem from="1614085155592" duration="10724000" />
       <workItem from="1614603701505" duration="5912000" />
+      <workItem from="1614748763864" duration="41000" />
+      <workItem from="1614776012890" duration="6548000" />
     </task>
     <task id="LOCAL-00001" summary="added axios and updated next lesson link">
       <created>1612717712644</created>
@@ -291,7 +299,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614608688751</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="some refactor. updated next lesson link">
+      <created>1614696553344</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1614696553344</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -305,6 +320,17 @@
         <option value="Default.Date" />
         <option value="Default.Subject" />
       </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
     </option>
   </component>
   <component name="VcsManagerConfiguration">
@@ -326,6 +352,7 @@
     <MESSAGE value="refactored reducers: async await" />
     <MESSAGE value="fix" />
     <MESSAGE value="added profile contacts edit form" />
-    <option name="LAST_COMMIT_MESSAGE" value="added profile contacts edit form" />
+    <MESSAGE value="some refactor. updated next lesson link" />
+    <option name="LAST_COMMIT_MESSAGE" value="some refactor. updated next lesson link" />
   </component>
 </project>
