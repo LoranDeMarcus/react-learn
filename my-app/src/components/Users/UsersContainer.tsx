@@ -14,19 +14,37 @@ import {
     getAllUsers,
     getCurrentPage,
     getFollowingInProgress,
-    getIsAuth,
     getIsFetching,
     getPageSize,
-    getTotalUsersCount
+    gettotalItemsCount
 } from '../../redux/users-selectors';
+import { UserType } from "../../Types/types";
+import { AppStateType } from "../../redux/redux-store";
 
-class UsersContainer extends React.Component {
+type MapStatePropsType = {
+    currentPage: number,
+    pageSize: number,
+    isFetching: boolean,
+    totalItemsCount: number
+    users: Array<UserType>,
+    followingInProgress: Array<number>,
+}
+
+type MapDispatchPropsType = {
+    getUsers: (currentPage: number, pageSize: number) => void,
+    toggleFollowing: (id: number) => void,
+    onPageChanged: (pageNum: number) => void
+}
+
+type PropsType = MapStatePropsType & MapDispatchPropsType;
+
+class UsersContainer extends React.Component<PropsType> {
     componentDidMount() {
         const { currentPage, pageSize } = this.props;
         this.props.getUsers(currentPage, pageSize);
     }
 
-    onPageChanged = (pageNum) => {
+    onPageChanged = (pageNum: number) => {
         const { pageSize } = this.props;
         this.props.getUsers(pageNum, pageSize);
     };
@@ -35,28 +53,27 @@ class UsersContainer extends React.Component {
         return (
             <>
                 { this.props.isFetching ? <Preloader /> : null }
-                <Users totalUsersCount={ this.props.totalUsersCount }
+                <Users totalItemsCount={ this.props.totalItemsCount }
                        pageSize={ this.props.pageSize }
-                       currentPage={ this.props.currentPage }
+                       currentPage={ this.props.currentPage } //
                        users={ this.props.users }
-                       onPageChanged={ this.onPageChanged }
+                       onPageChanged={ this.onPageChanged } //
                        followingInProgress={ this.props.followingInProgress }
-                       toggleFollowing={ this.props.toggleFollowing }
+                       toggleFollowing={ this.props.toggleFollowing } //
                 />
             </>
         );
     }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state: AppStateType): MapStatePropsType => {
     return {
         users: getAllUsers(state),
         pageSize: getPageSize(state),
-        totalUsersCount: getTotalUsersCount(state),
+        totalItemsCount: gettotalItemsCount(state),
         currentPage: getCurrentPage(state),
         isFetching: getIsFetching(state),
-        followingInProgress: getFollowingInProgress(state),
-        isAuth: getIsAuth(state)
+        followingInProgress: getFollowingInProgress(state)
     };
 };
 
@@ -68,5 +85,5 @@ const dispatches = {
     toggleFollowing
 };
 
-export default compose(
-    connect(mapStateToProps, dispatches))(UsersContainer);
+// @ts-ignore
+export default compose( connect<MapStatePropsType, MapDispatchPropsType, AppStateType>(mapStateToProps, dispatches))(UsersContainer);

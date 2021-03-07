@@ -43,7 +43,7 @@ class App extends React.Component {
 
         return (
             <div className="App">
-                <HeaderContainer />
+                <HeaderContainer pageTitle={'Title'} />
                 <FixedSidebar />
                 <div className="content">
                     <Switch>
@@ -51,7 +51,7 @@ class App extends React.Component {
                     </Switch>
 
                     <Route path='/newsfeed'
-                           render={ () => <Newsfeed /> } />
+                           render={ () => <Newsfeed store={ store } /> } />
 
                     <Route path='/profile/:userId?'
                            render={ () => <ProfileMain /> } />
@@ -67,8 +67,8 @@ class App extends React.Component {
                     <Route path='/login'
                            render={ () => <Login /> } />
 
-                    <Route path='*'
-                           render={ () => <div>404 NOT FOUND</div> } />
+                    {/*<Route path='*'
+                           render={ () => <div>404 NOT FOUND</div> } />*/}
                 </div>
             </div>
         );

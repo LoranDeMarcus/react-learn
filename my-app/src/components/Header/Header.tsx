@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { FC } from 'react';
 import logo from './logo.png';
 import styles from './Header.module.css';
 import { NavLink } from 'react-router-dom';
 
-const Header = (props) => {
+type PropsType = {
+    pageTitle: string,
+    isAuth: boolean,
+    login: string,
+    logout: () => void
+}
+
+const Header: FC<PropsType> = ({ pageTitle, isAuth, login, logout }) => {
     return (
         <header className={ styles.block }>
             <div className={ styles.logo }>
@@ -21,7 +28,7 @@ const Header = (props) => {
                     </form>
                 </div>
                 <div className={ styles.name }>
-                    <span>profile</span>
+                    <span>{ pageTitle }</span>
                 </div>
                 <ul className={ styles.settings }>
                     <li className={ styles.item }>
@@ -52,7 +59,9 @@ const Header = (props) => {
                 </ul>
                 <div className={ styles.panel }>
                     <h5 className={ styles.panel__title }>
-                        { props.isAuth ? <div>{ props.login } - <button onClick={props.logout}>Log out</button></div> : <NavLink to={ '/login' }>Login</NavLink> }
+                        { isAuth ?
+                            <div>{ login } - <button onClick={ logout }>Log out</button></div> :
+                            <NavLink to={ '/login' }>Login</NavLink> }
                     </h5>
                 </div>
                 <div className={ styles.login }>

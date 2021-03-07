@@ -6,11 +6,12 @@ import { logout } from '../../redux/auth-reducer';
 class HeaderContainer extends React.Component {
 
     render() {
+        // @ts-ignore
         return <Header { ...this.props } />;
     }
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state: { auth: { isAuth: any; login: any; logout: any; }; }) => ({
     isAuth: state.auth.isAuth,
     login: state.auth.login,
     logout: state.auth.logout

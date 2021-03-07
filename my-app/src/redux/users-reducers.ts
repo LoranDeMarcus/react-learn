@@ -12,10 +12,10 @@ import { UserType } from "../Types/types";
 const initialState = {
     users: [] as Array<UserType>,
     pageSize: 8,
-    totalUsersCount: 0,
+    totalItemsCount: 0,
     currentPage: 1,
     isFetching: false,
-    followingInProgress: [] as Array<number>
+    followingInProgress: [] as Array<number>,
 };
 
 type InitialStateType = typeof initialState;
@@ -51,7 +51,7 @@ export const usersReducer = (state = initialState, action: any): InitialStateTyp
         case SET_TOTAL_USERS_COUNT: {
             return {
                 ...state,
-                totalUsersCount: action.totalUsersCount
+                totalItemsCount: action.totalItemsCount
             };
         }
         case TOGGLE_IS_FETCHING: {
@@ -104,14 +104,14 @@ export const togglePage = (currentPage: number): TogglePageActionType => ({
     currentPage
 });
 
-type SetTotalUsersCountActionType = {
+type SettotalItemsCountActionType = {
     type: typeof SET_TOTAL_USERS_COUNT,
-    totalUsersCount: number
+    totalItemsCount: number
 }
 
-export const setTotalUsersCount = (totalUsersCount: number): SetTotalUsersCountActionType => ({
+export const settotalItemsCount = (totalItemsCount: number): SettotalItemsCountActionType => ({
     type: SET_TOTAL_USERS_COUNT,
-    totalUsersCount
+    totalItemsCount
 });
 
 type ToggleIsFetchingActionType = {
@@ -143,7 +143,7 @@ export const getUsers = (page: number, pageSize: number) => async (dispatch: any
     const response = await usersAPI.getUsersRequest(page, pageSize);
     dispatch(toggleIsFetching(false));
     dispatch(setUsers(response.items));
-    dispatch(setTotalUsersCount(response.totalCount > 120 ? 120 : response.totalCount));
+    dispatch(settotalItemsCount(response.totalCount));
 };
 
 export const toggleFollowing = (id: number) => async (dispatch: any) => {
