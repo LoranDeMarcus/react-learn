@@ -90,7 +90,7 @@ const initialState = {
 
 export type InitialStateType = typeof initialState;
 
-export const messagesReducer = (state = initialState, action: any): InitialStateType => {
+export const messagesReducer = (state = initialState, action: SendMessageCreatorActionType): InitialStateType => {
     switch (action.type) {
         case SEND_MESSAGE: {
             return <InitialStateType>{

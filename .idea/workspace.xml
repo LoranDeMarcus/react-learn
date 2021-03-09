@@ -5,22 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ffdf472d-3220-4381-bfd5-758f3e73821b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/my-app/src/components/common/Paginator/Paginator.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Header/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Header/HeaderContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Header/HeaderContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Newsfeed/Newsfeed.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Newsfeed/Newsfeed.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/ProfileStatus/ProfileStatus.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/ProfileStatus/ProfileStatus.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Users/Users.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Users/Users.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Users/UsersContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Users/UsersContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/common/Paginator/Paginator.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/redux/redux-store.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/redux-store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/redux/users-reducers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/users-reducers.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/redux/users-selectors.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/users-selectors.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/Author/Author.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Author/Author.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/Users/UsersContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Users/UsersContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/redux/app-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/app-reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/redux/auth-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/auth-reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/redux/messages-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/messages-reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/redux/profile-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/profile-reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/redux/redux-store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/redux-store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/redux/users-reducers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/users-reducer.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +44,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../satellite" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -60,8 +53,8 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/my-app/node_modules/react-scripts" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
-    <property name="ts.external.directory.path" value="E:\Projects\react-js\my-app\node_modules\typescript\lib" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/my-app/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -175,9 +168,8 @@
       <workItem from="1613980368529" duration="9598000" />
       <workItem from="1614085155592" duration="10724000" />
       <workItem from="1614603701505" duration="5912000" />
-      <workItem from="1614866947071" duration="1511000" />
-      <workItem from="1615123799037" duration="3099000" />
-      <workItem from="1615127983058" duration="8256000" />
+      <workItem from="1614748763864" duration="41000" />
+      <workItem from="1614776012890" duration="6548000" />
     </task>
     <task id="LOCAL-00001" summary="added axios and updated next lesson link">
       <created>1612717712644</created>
@@ -305,12 +297,12 @@
       <option name="project" value="LOCAL" />
       <updated>1614608688751</updated>
     </task>
-    <task id="LOCAL-00019" summary="refactored all reducers to TS">
-      <created>1614791602562</created>
+    <task id="LOCAL-00019" summary="some refactor. updated next lesson link">
+      <created>1614696553344</created>
       <option name="number" value="00019" />
       <option name="presentableId" value="LOCAL-00019" />
       <option name="project" value="LOCAL" />
-      <updated>1614791602562</updated>
+      <updated>1614696553344</updated>
     </task>
     <option name="localTasksCounter" value="20" />
     <servers />
@@ -327,6 +319,18 @@
         <option value="Default.Subject" />
       </list>
     </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added axios and updated next lesson link" />
@@ -347,11 +351,7 @@
     <MESSAGE value="refactored reducers: async await" />
     <MESSAGE value="fix" />
     <MESSAGE value="added profile contacts edit form" />
-    <MESSAGE value="refactored all reducers to TS" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactored all reducers to TS" />
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
+    <MESSAGE value="some refactor. updated next lesson link" />
+    <option name="LAST_COMMIT_MESSAGE" value="some refactor. updated next lesson link" />
   </component>
 </project>

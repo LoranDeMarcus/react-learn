@@ -6,7 +6,7 @@ import {
     toggleFollowing,
     toggleFollowingProgress,
     togglePage
-} from '../../redux/users-reducers';
+} from '../../redux/users-reducer';
 import Users from './Users';
 import Preloader from '../common/Preloader/Preloader';
 import { compose } from 'redux';

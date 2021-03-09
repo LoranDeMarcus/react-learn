@@ -2,6 +2,8 @@ import { ADD_POST, DELETE_POST, SAVE_PHOTO_SUCCESS, SET_USER_PROFILE, SET_USER_S
 import { profileAPI } from '../API/API';
 import { stopSubmit } from 'redux-form';
 import { PhotosType, PostsType, ProfileType } from "../Types/types";
+import { ThunkAction } from "redux-thunk";
+import { AppStateType } from "./redux-store";
 
 const initialState = {
     posts: [
@@ -33,7 +35,10 @@ const initialState = {
 
 export type InitialStateType = typeof initialState;
 
-export const profileReducer = (state = initialState, action: any): InitialStateType => {
+type ActionsTypes = AddPostCreatorActionType | SetUserProfileActionType
+    | SetUserStatusActionType | DeletePostActionType | SavePhotoSuccessActionType;
+
+export const profileReducer = (state = initialState, action: ActionsTypes): InitialStateType => {
     switch (action.type) {
         case ADD_POST: {
             return {
@@ -134,42 +139,54 @@ export const savePhotoSuccess = (photos: PhotosType): SavePhotoSuccessActionType
     };
 };
 
-export const getUsersProfile = (userId: number) => async (dispatch: any) => {
-    const response = await profileAPI.getUsersProfile(userId);
-    dispatch(setUserProfile(response));
-};
+type ThunkType = ThunkAction<Promise<void>, AppStateType, unknown, ActionsTypes>;
 
-export const getUserStatus = (userId: number) => async (dispatch: any) => {
-    let response = await profileAPI.getUserStatus(userId);
-    if (!response) {
-        response = 'Change status';
+export const getUsersProfile = (userId: number): ThunkType => {
+    return async (dispatch: any) => {
+        const response = await profileAPI.getUsersProfile(userId);
+        dispatch(setUserProfile(response));
+    };
+}
+
+export const getUserStatus = (userId: number): ThunkType => {
+    return async (dispatch: any) => {
+        let response = await profileAPI.getUserStatus(userId);
+        if (!response) {
+            response = 'Change status';
+            dispatch(setUserStatus(response));
+        }
         dispatch(setUserStatus(response));
-    }
-    dispatch(setUserStatus(response));
-};
+    };
+}
 
-export const updateUserStatus = (status: string) => async (dispatch: any) => {
-    const response = await profileAPI.updateUserStatus(status);
-    if (response.data.resultCode === 0) {
-        dispatch(setUserStatus(status));
-    }
-};
+export const updateUserStatus = (status: string): ThunkType => {
+    return async (dispatch: any) => {
+        const response = await profileAPI.updateUserStatus(status);
+        if (response.data.resultCode === 0) {
+            dispatch(setUserStatus(status));
+        }
+    };
+}
 
-export const savePhoto = (file: any) => async (dispatch: any) => {
-    const response = await profileAPI.savePhoto(file);
-    if (response.data.resultCode === 0) {
-        dispatch(savePhotoSuccess(response.data.data.photos));
-    }
-};
+export const savePhoto = (file: any): ThunkType => {
+    return async (dispatch: any) => {
+        const response = await profileAPI.savePhoto(file);
+        if (response.data.resultCode === 0) {
+            dispatch(savePhotoSuccess(response.data.data.photos));
+        }
+    };
+}
 
-export const saveProfile = (profile: ProfileType) => async (dispatch: any, getState: any) => {
-    const userId = getState().auth.id;
-    const response = await profileAPI.saveProfile(profile);
-    if (response.data.resultCode === 0) {
-        dispatch(getUsersProfile(userId));
-    } else {
-        const message = response.data.messages.length > 0 ? response.data.messages[0] : 'Some error';
-        dispatch(stopSubmit('edit-profile', { _error: message }));
-        return Promise.reject(message);
-    }
-};
+export const saveProfile = (profile: ProfileType): ThunkType => {
+    return async (dispatch: any, getState: any) => {
+        const userId = getState().auth.id;
+        const response = await profileAPI.saveProfile(profile);
+        if (response.data.resultCode === 0) {
+            dispatch(getUsersProfile(userId));
+        } else {
+            const message = response.data.messages.length > 0 ? response.data.messages[0] : 'Some error';
+            dispatch(stopSubmit('edit-profile', { _error: message }));
+            return Promise.reject(message);
+        }
+    };
+}
