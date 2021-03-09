@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { ProfileType } from "../Types/types";
+import { ProfileType, UserType } from "../Types/types";
 
 const axiosInstance = axios.create({
     withCredentials: true,
@@ -9,9 +9,25 @@ const axiosInstance = axios.create({
     }
 });
 
+type GetUsersRequestType = {
+    items: Array<UserType>,
+    totalCount: number,
+    error: string
+}
+
+type IsFollowedRequestType = {
+    bool: boolean
+}
+
+type ToggleFollowType = {
+    resultCode: ResultCodesEnum,
+    messages: Array<string>,
+    data: object
+}
+
 export const usersAPI = {
     getUsersRequest(currentPage = 1, pageSize = 8) {
-        return axiosInstance.get(`users?page=${ currentPage }&count=${ pageSize }`).then(response => response.data);
+        return axiosInstance.get<GetUsersRequestType>(`users?page=${ currentPage }&count=${ pageSize }`).then(response => response.data);
     },
     getUsersProfile(userId: number) {
         console.warn('Obsolete method. Please use profileAPI object');
@@ -20,9 +36,9 @@ export const usersAPI = {
     toggleFollow(userId: number) {
         return axiosInstance.get(`follow/${ userId }`).then(response => {
             if (response.data === false) {
-                return axiosInstance.post(`follow/${ userId }`).then(response => response.data);
+                return axiosInstance.post<ToggleFollowType>(`follow/${ userId }`).then(response => response.data);
             } else {
-                return axiosInstance.delete(`follow/${ userId }`).then(response => response.data);
+                return axiosInstance.delete<ToggleFollowType>(`follow/${ userId }`).then(response => response.data);
             }
         });
     }
@@ -47,7 +63,7 @@ type SavePhotoType = {
 }
 
 export const profileAPI = {
-    getUsersProfile(userId: number) {
+    getUsersProfile(userId: number | null) {
         return axiosInstance.get<ProfileType>(`profile/${ userId }`).then(response => response.data);
     },
     getUserStatus(userId: number) {

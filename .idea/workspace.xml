@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ffdf472d-3220-4381-bfd5-758f3e73821b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/my-app/src/API/API.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/API/API.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/redux/auth-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/auth-reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/API/API.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/API/API.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/redux/profile-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/profile-reducer.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,7 +38,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../satellite" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -49,8 +47,8 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/my-app/node_modules/react-scripts" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
-    <property name="ts.external.directory.path" value="$PROJECT_DIR$/my-app/node_modules/typescript/lib" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
+    <property name="ts.external.directory.path" value="E:\Projects\react-js\my-app\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -164,8 +162,9 @@
       <workItem from="1613980368529" duration="9598000" />
       <workItem from="1614085155592" duration="10724000" />
       <workItem from="1614603701505" duration="5912000" />
-      <workItem from="1614748763864" duration="41000" />
-      <workItem from="1614776012890" duration="6548000" />
+      <workItem from="1614866947071" duration="1511000" />
+      <workItem from="1615123799037" duration="3099000" />
+      <workItem from="1615127983058" duration="8256000" />
     </task>
     <task id="LOCAL-00001" summary="added axios and updated next lesson link">
       <created>1612717712644</created>
@@ -293,21 +292,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614608688751</updated>
     </task>
-    <task id="LOCAL-00019" summary="some refactor. updated next lesson link">
-      <created>1614696553344</created>
+    <task id="LOCAL-00019" summary="refactored all reducers to TS">
+      <created>1614791602562</created>
       <option name="number" value="00019" />
       <option name="presentableId" value="LOCAL-00019" />
       <option name="project" value="LOCAL" />
-      <updated>1614696553344</updated>
+      <updated>1614791602562</updated>
     </task>
-    <task id="LOCAL-00020" summary="added TS to reducers actions">
-      <created>1615298005586</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1615298005586</updated>
-    </task>
-    <option name="localTasksCounter" value="21" />
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -326,14 +318,38 @@
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
-        <entry key="MAIN">
+        <entry key="1">
           <value>
-            <State />
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:E:/Projects/react-js/my-app/src" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="1" value="TOOL_WINDOW" />
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added axios and updated next lesson link" />
@@ -354,8 +370,11 @@
     <MESSAGE value="refactored reducers: async await" />
     <MESSAGE value="fix" />
     <MESSAGE value="added profile contacts edit form" />
-    <MESSAGE value="some refactor. updated next lesson link" />
-    <MESSAGE value="added TS to reducers actions" />
-    <option name="LAST_COMMIT_MESSAGE" value="added TS to reducers actions" />
+    <MESSAGE value="refactored all reducers to TS" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactored all reducers to TS" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

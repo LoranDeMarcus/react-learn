@@ -141,15 +141,15 @@ export const savePhotoSuccess = (photos: PhotosType): SavePhotoSuccessActionType
 
 type ThunkType = ThunkAction<Promise<void>, AppStateType, unknown, ActionsTypes>;
 
-export const getUsersProfile = (userId: number): ThunkType => {
-    return async (dispatch: any) => {
+export const getUsersProfile = (userId: number | null): ThunkType => {
+    return async (dispatch) => {
         const response = await profileAPI.getUsersProfile(userId);
         dispatch(setUserProfile(response));
     };
 }
 
 export const getUserStatus = (userId: number): ThunkType => {
-    return async (dispatch: any) => {
+    return async (dispatch) => {
         let response = await profileAPI.getUserStatus(userId);
         if (!response) {
             response = 'Change status';
@@ -160,7 +160,7 @@ export const getUserStatus = (userId: number): ThunkType => {
 }
 
 export const updateUserStatus = (status: string): ThunkType => {
-    return async (dispatch: any) => {
+    return async (dispatch) => {
         const response = await profileAPI.updateUserStatus(status);
         if (response.resultCode === ResultCodesEnum.success) {
             dispatch(setUserStatus(status));
@@ -169,23 +169,23 @@ export const updateUserStatus = (status: string): ThunkType => {
 }
 
 export const savePhoto = (file: any): ThunkType => {
-    return async (dispatch: any) => {
+    return async (dispatch) => {
         const response = await profileAPI.savePhoto(file);
-        console.log(response)
         if (response.resultCode === ResultCodesEnum.success) {
-            dispatch(savePhotoSuccess(response.data.data.photos));
+            dispatch(savePhotoSuccess(response.data.photos));
         }
     };
 }
 
 export const saveProfile = (profile: ProfileType): ThunkType => {
-    return async (dispatch: any, getState: any) => {
+    return async (dispatch, getState) => {
         const userId = getState().auth.id;
         const response = await profileAPI.saveProfile(profile);
         if (response.resultCode === ResultCodesEnum.success) {
-            dispatch(getUsersProfile(userId));
+            await dispatch(getUsersProfile(userId)); // fixme: тут надо проверить тип у userId
         } else {
             const message = response.messages.length > 0 ? response.messages[0] : 'Some error';
+            // @ts-ignore
             dispatch(stopSubmit('edit-profile', { _error: message }));
             return Promise.reject(message);
         }
