@@ -25,7 +25,6 @@ const UsersMain = React.lazy(() => import ('./components/UsersMain/UsersMain'));
 
 class App extends React.Component {
     catchAllUnhandledErrors = () => {
-        debugger;
         alert('Some error occured');
     };
 

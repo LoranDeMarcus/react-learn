@@ -1,5 +1,5 @@
 import { SET_USER_DATA, GET_CAPTCHA_URL_SUCCESS } from './types';
-import { authAPI, securityAPI } from '../API/API';
+import { authAPI, CaptchaEnum, ResultCodesEnum, securityAPI } from '../API/API';
 import { stopSubmit } from 'redux-form';
 import { ThunkAction } from "redux-thunk";
 import { AppStateType } from "./redux-store";
@@ -79,7 +79,7 @@ type ThunkType = ThunkAction<Promise<void>, AppStateType, unknown, ActionsTypes>
 export const authMe = (): ThunkType => {
     return async (dispatch) => {
         const response = await authAPI.authMeRequest();
-        if (response.resultCode === 0) {
+        if (response.resultCode === ResultCodesEnum.success) {
             const { id, email, login } = response.data;
             dispatch(setAuthUserData(id, email, login, true));
         }
@@ -89,12 +89,12 @@ export const authMe = (): ThunkType => {
 export const login = (email: string, password: string, rememberMe: boolean, captcha: string): ThunkType => {
     return async (dispatch)  => {
         const response = await authAPI.loginRequest(email, password, rememberMe, captcha);
-        if (response.resultCode === 0) {
+        if (response.resultCode === ResultCodesEnum.success) {
             // @ts-ignore
             dispatch(setAuthUserData());
         } else {
-            if (response.resultCode === 10) {
-                dispatch(getCaptchaUrl());
+            if (response.resultCode === CaptchaEnum.captcha) {
+                await dispatch(getCaptchaUrl());
             }
             const message = response.messages.length > 0 ? response.messages[0] : 'Some error';
             // @ts-ignore
@@ -114,7 +114,7 @@ export const getCaptchaUrl = (): ThunkType => {
 export const logout = (): ThunkType => {
     return async (dispatch) => {
         const response = await authAPI.logoutRequest();
-        if (response.resultCode === 0) {
+        if (response.resultCode === ResultCodesEnum.success) {
             dispatch(setAuthUserData(null, null, null, false));
         }
     };

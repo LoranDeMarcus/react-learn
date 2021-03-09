@@ -17,8 +17,8 @@ ReactDOM.render(
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
 
-// next lesson: https://www.youtube.com/watch?v=fltI2uTv12c&list=PLcvhF2Wqh7DM3z1XqMw0kPuxpbyMo3HvN
-// TODO: типизировать остальные компоненты
+// next lesson: https://www.youtube.com/watch?v=Vaa8iuN1YFE&list=PLcvhF2Wqh7DM3z1XqMw0kPuxpbyMo3HvN&index=9
+// TODO: типизировать остальные компоненты, API дотипизировать
 
 /*
 fixme: 1. переписать redux form на REACT FINAL FORM

@@ -1,5 +1,5 @@
 import { ADD_POST, DELETE_POST, SAVE_PHOTO_SUCCESS, SET_USER_PROFILE, SET_USER_STATUS } from './types';
-import { profileAPI } from '../API/API';
+import { profileAPI, ResultCodesEnum } from '../API/API';
 import { stopSubmit } from 'redux-form';
 import { PhotosType, PostsType, ProfileType } from "../Types/types";
 import { ThunkAction } from "redux-thunk";
@@ -162,7 +162,7 @@ export const getUserStatus = (userId: number): ThunkType => {
 export const updateUserStatus = (status: string): ThunkType => {
     return async (dispatch: any) => {
         const response = await profileAPI.updateUserStatus(status);
-        if (response.data.resultCode === 0) {
+        if (response.resultCode === ResultCodesEnum.success) {
             dispatch(setUserStatus(status));
         }
     };
@@ -171,7 +171,8 @@ export const updateUserStatus = (status: string): ThunkType => {
 export const savePhoto = (file: any): ThunkType => {
     return async (dispatch: any) => {
         const response = await profileAPI.savePhoto(file);
-        if (response.data.resultCode === 0) {
+        console.log(response)
+        if (response.resultCode === ResultCodesEnum.success) {
             dispatch(savePhotoSuccess(response.data.data.photos));
         }
     };
@@ -181,10 +182,10 @@ export const saveProfile = (profile: ProfileType): ThunkType => {
     return async (dispatch: any, getState: any) => {
         const userId = getState().auth.id;
         const response = await profileAPI.saveProfile(profile);
-        if (response.data.resultCode === 0) {
+        if (response.resultCode === ResultCodesEnum.success) {
             dispatch(getUsersProfile(userId));
         } else {
-            const message = response.data.messages.length > 0 ? response.data.messages[0] : 'Some error';
+            const message = response.messages.length > 0 ? response.messages[0] : 'Some error';
             dispatch(stopSubmit('edit-profile', { _error: message }));
             return Promise.reject(message);
         }
