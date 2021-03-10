@@ -1,17 +1,18 @@
 import React from 'react';
-import { WrappedFieldMetaProps } from 'redux-form';
+import { WrappedFieldInputProps, WrappedFieldMetaProps } from 'redux-form';
 
 import styles from './FormController.module.css';
 
 type ElementType = {
-    input: string,
+    input: WrappedFieldInputProps,
     meta: WrappedFieldMetaProps,
     text: string
 }
 
-type ElementControlType = (params: ElementType) => void;
+type ElementControlType = (params: string) => React.ReactNode;
 
-export const Element: ElementControlType = Element => ({ input, meta, text, ...props }) => {
+// @ts-ignore
+export const Element: ElementControlType = (Element) => ({ input, meta, text, ...props }) => {
     const isError = meta.touched && meta.error;
     return (
         <div className={ `${ styles.formsController } ${ isError ? styles.error : '' }` }>
