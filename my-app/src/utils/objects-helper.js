@@ -1,6 +1,6 @@
-export const toggleObjectValueInArray = (items: any, objPropName: string, itemId: number, newObjProps: any) => {
+export const toggleObjectValueInArray = (items, objPropName, itemId, newObjProps) => {
     console.log(newObjProps);
-    return items.map((item: any) => {
+    return items.map(item => {
         if (item[objPropName] === itemId) {
             return { ...item, ...newObjProps };
         }

@@ -17,7 +17,7 @@ ReactDOM.render(
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
 
-// next lesson: https://www.youtube.com/watch?v=FK_FSOCC3ss&list=PLcvhF2Wqh7DM3z1XqMw0kPuxpbyMo3HvN&index=10
+// next lesson: https://www.youtube.com/watch?v=FK_FSOCC3ss&list=PLcvhF2Wqh7DM3z1XqMw0kPuxpbyMo3HvN&index=11 8:15
 // TODO: типизировать остальные компоненты, API дотипизировать
 
 /*
