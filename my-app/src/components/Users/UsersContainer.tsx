@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { getUsers,toggleFollowing } from '../../redux/users-reducer';
+import { actions, getUsers, toggleFollowing } from '../../redux/users-reducer';
 import Users from './Users';
 import Preloader from '../common/Preloader/Preloader';
 import { compose } from 'redux';
@@ -14,6 +14,8 @@ import {
 } from '../../redux/users-selectors';
 import { UserType } from "../../Types/types";
 import { AppStateType } from "../../redux/redux-store";
+
+const { toggleFollow, togglePage, toggleFollowingProgress} = actions;
 
 type MapStatePropsType = {
     currentPage: number,
