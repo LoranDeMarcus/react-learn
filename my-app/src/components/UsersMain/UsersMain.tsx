@@ -2,11 +2,11 @@ import Container from '../Container/Container';
 import React from 'react';
 import UsersContainer from '../Users/UsersContainer';
 
-const UsersMain = () => {
+const UsersMain = (props: any) => {
     return (
         <main>
             <Container>
-                <UsersContainer />
+                <UsersContainer {...props} />
             </Container>
         </main>
     );
