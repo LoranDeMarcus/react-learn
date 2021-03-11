@@ -13,6 +13,38 @@ const initialState = {
 
 type InitialStateType = typeof initialState;
 
+type ActionsTypes = InferActionsTypes<typeof actions>
+
+export const actions = {
+    toggleFollow: (id: number) => ({
+        type: 'TOGGLE_FOLLOW',
+        id
+    } as const),
+    setUsers: (users: Array<UserType>) => ({
+        type: 'SET_USERS',
+        users
+    } as const),
+    togglePage: (currentPage: number) => ({
+        type: 'TOGGLE_PAGE',
+        currentPage
+    } as const),
+    settotalItemsCount: (totalItemsCount: number) => ({
+        type: 'SET_TOTAL_USERS_COUNT',
+        totalItemsCount
+    } as const),
+    toggleIsFetching: (isFetching: boolean) => ({
+        type: 'TOGGLE_IS_FETCHING',
+        isFetching
+    } as const),
+    toggleFollowingProgress: (isFetching: boolean, id: number) => ({
+        type: 'TOGGLE_IS_FOLLOWING_PROGRESS',
+        isFetching,
+        id
+    } as const)
+}
+
+type ThunkType = BaseThunkType<ActionsTypes>;
+
 export const usersReducer = (state = initialState, action: ActionsTypes): InitialStateType => {
     switch (action.type) {
         case 'TOGGLE_FOLLOW': {
@@ -67,40 +99,8 @@ export const usersReducer = (state = initialState, action: ActionsTypes): Initia
     }
 };
 
-type ActionsTypes = InferActionsTypes<typeof actions>
-
-export const actions = {
-    toggleFollow: (id: number) => ({
-        type: 'TOGGLE_FOLLOW',
-        id
-    } as const),
-    setUsers: (users: Array<UserType>) => ({
-        type: 'SET_USERS',
-        users
-    } as const),
-    togglePage: (currentPage: number) => ({
-        type: 'TOGGLE_PAGE',
-        currentPage
-    } as const),
-    settotalItemsCount: (totalItemsCount: number) => ({
-        type: 'SET_TOTAL_USERS_COUNT',
-        totalItemsCount
-    } as const),
-    toggleIsFetching: (isFetching: boolean) => ({
-        type: 'TOGGLE_IS_FETCHING',
-        isFetching
-    } as const),
-    toggleFollowingProgress: (isFetching: boolean, id: number) => ({
-        type: 'TOGGLE_IS_FOLLOWING_PROGRESS',
-        isFetching,
-        id
-    } as const)
-}
-
-type ThunkType = BaseThunkType<ActionsTypes>;
-
 export const getUsers = (page: number, pageSize: number): ThunkType => {
-    return async (dispatch, getState) => {
+    return async (dispatch) => {
         dispatch(actions.toggleIsFetching(true));
         dispatch(actions.togglePage(page));
 

@@ -5,7 +5,7 @@ import {
     getUsersProfile,
     getUserStatus,
     savePhoto, saveProfile,
-    setUserProfile,
+    actions,
     updateUserStatus
 } from '../../redux/profile-reducer';
 import { withRouter } from 'react-router';
@@ -58,6 +58,8 @@ const mapStateToProps = (state) => ({
     authorizedUserId: state.auth.id,
     isAuthL: state.auth.isAuth
 });
+
+const { setUserProfile } = actions;
 
 export default compose(
     connect(mapStateToProps, {
