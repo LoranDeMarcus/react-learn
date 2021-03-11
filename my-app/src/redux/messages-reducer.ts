@@ -1,10 +1,9 @@
-import { SEND_MESSAGE } from './types';
-
 import user1 from '../components/avatars/chatuser1.jpg';
 import user2 from '../components/avatars/chatuser2.jpg';
 import user3 from '../components/avatars/chatuser3.jpg';
 import user4 from '../components/avatars/chatuser4.jpg';
 import user5 from '../components/avatars/chatuser51.jpg';
+import { InferActionsTypes } from "./redux-store";
 
 type DialogType = {
     id: number,
@@ -90,9 +89,19 @@ const initialState = {
 
 export type InitialStateType = typeof initialState;
 
-export const messagesReducer = (state = initialState, action: SendMessageCreatorActionType): InitialStateType => {
+export const actions = {
+    sendMessageCreator: (newMessageBody: string) => ({
+        type: 'SEND_MESSAGE',
+        newMessageBody
+    } as const)
+}
+
+type ActionsType = InferActionsTypes<typeof actions>
+
+
+export const messagesReducer = (state = initialState, action: ActionsType): InitialStateType => {
     switch (action.type) {
-        case SEND_MESSAGE: {
+        case 'SEND_MESSAGE': {
             return <InitialStateType>{
                 ...state,
                 messages: [...state.messages, {
@@ -104,16 +113,4 @@ export const messagesReducer = (state = initialState, action: SendMessageCreator
         default:
             return state;
     }
-};
-
-type SendMessageCreatorActionType = {
-    type: typeof SEND_MESSAGE,
-    newMessageBody: string
-}
-
-export const sendMessageCreator = (newMessageBody: string): SendMessageCreatorActionType => {
-    return {
-        type: SEND_MESSAGE,
-        newMessageBody
-    };
 };

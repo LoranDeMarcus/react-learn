@@ -1,9 +1,10 @@
 import { ADD_POST, DELETE_POST, SAVE_PHOTO_SUCCESS, SET_USER_PROFILE, SET_USER_STATUS } from './types';
-import { profileAPI, ResultCodesEnum } from '../API/API';
+import { ResultCodesEnum } from '../API/API';
 import { stopSubmit } from 'redux-form';
 import { PhotosType, PostsType, ProfileType } from "../Types/types";
 import { ThunkAction } from "redux-thunk";
 import { AppStateType } from "./redux-store";
+import { profileAPI } from "../API/profile-api";
 
 const initialState = {
     posts: [

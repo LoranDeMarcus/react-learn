@@ -17,11 +17,11 @@ ReactDOM.render(
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
 
-// next lesson: https://www.youtube.com/watch?v=FK_FSOCC3ss&list=PLcvhF2Wqh7DM3z1XqMw0kPuxpbyMo3HvN&index=11 8:15
+// next lesson: https://www.youtube.com/watch?v=FK_FSOCC3ss&list=PLcvhF2Wqh7DM3z1XqMw0kPuxpbyMo3HvN&index=12 1:27:00
 // TODO: типизировать остальные компоненты, API дотипизировать
 
 /*
-fixme: 1. переписать redux form на REACT FINAL FORM
+fixme: 1. переписать redux form на FORMIK
       2. в input статуса добавить кнопку галочку для сабмита
       3. добавить возможность удалять посты
       4. HeaderContainer типизировать

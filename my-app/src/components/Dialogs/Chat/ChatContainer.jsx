@@ -1,5 +1,5 @@
 import React from 'react';
-import { sendMessageCreator } from '../../../redux/messages-reducer';
+import { actions } from '../../../redux/messages-reducer';
 import Chat from './Chat';
 import connect from 'react-redux/lib/connect/connect';
 import { withAuthRedirect } from '../../../HOC/withAuthRedirect';
@@ -16,7 +16,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         sendMessage: (message) => {
-            dispatch(sendMessageCreator(message))
+            dispatch(actions.sendMessageCreator(message))
         }
     }
 }
